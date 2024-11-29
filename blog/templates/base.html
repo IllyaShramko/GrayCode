@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            {% if not is_auth %}
+                <a href="{% url 'registration' %}">Registration</a>
+                <a href="{% url 'login' %}">Login</a>
+            {% else %}
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'create_qr' %}">Create QR</a>
+                <a href="{% url 'my_qr' %}"></a>
+                <a href="{% url 'contacts' %}"></a>
+                <a href="{% url 'subscribe' %}"></a>
+            {% endif %}
+        </header>
+        {% block content %}
+        
+        {% endblock %}
+    </body>
+</html>
