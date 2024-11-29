@@ -17,8 +17,10 @@ Including another URLconf
 from create_qrc.views import render_create_qrc
 from django.contrib import admin
 from django.urls import path
+from home_app.views import render_home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create_qrc/', render_create_qrc, name= "create_qr")
+    path('create_qrc/', render_create_qrc, name= "create_qr"),
+    path('', render_home, name = 'home')
 ]

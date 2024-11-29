@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'create_qrc'
+    'create_qrc',
+    'home_app'
 ]
 
 MIDDLEWARE = [
