@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Illya Shramko\OneDrive\Desktop\from_url_to_QR\venv
+set VIRTUAL_ENV=C:\Users\david\OneDrive\Рабочий стол\django_project 29.11\From_url_to_QR\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
