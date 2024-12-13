@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% block head %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        {% if not is_auth %}
+            <header class="without-auth">
+                    <div>
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                        <h1 class="title">QRCode Aqua</h1>
+                    </div>
+                    <div class="links">
+                        <a href="{% url 'registration' %}">Registration</a>
+                        <a href="{% url 'login' %}">Login</a>
+                    </div>
+            
+            </header>
+        {% else %}
+            <header class="with-auth">   
+                {#
+                <a href="{% url 'my_qr' %}"></a>
+                <a href="{% url 'contacts' %}"></a>
+                <a href="{% url 'subscribe' %}"></a>
+                #}
+            </header>
+        {% endif %}
+        {% block content %}
+        
+        {% endblock %}
+    </body>
+</html>
