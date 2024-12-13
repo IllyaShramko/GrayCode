@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Login
+{% endblock %}    
+
+{% block content %}
+    <!-- <header>
+        <img src="{% static 'user/images/logo' %}" alt="">
+        <p class="name">QRCode Aqua</p>
+        <a href="" class="log">LOG IN</a>
+        <a href="" class="reg">SIGN UP</a>
+    </header> -->
+    <form method="post" class="registration">
+        <h1>SIGN UP</h1>
+        <input type="text", title="Username">
+        <input type="email", title="Email">
+        <input type="password", title="Password">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -16,11 +16,14 @@ Including another URLconf
 """
 from create_qrc.views import render_create_qrc
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from home_app.views import render_home
+from user.views import render_login
+from user.views import render_registration
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('create_qrc/', render_create_qrc, name= "create_qr"),
-    path('', render_home, name = 'home')
+    path('', render_home, name = 'home'),
+    path('user/', include("user.urls")),
 ]
