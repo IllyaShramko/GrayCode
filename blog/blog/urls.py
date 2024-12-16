@@ -20,10 +20,13 @@ from django.urls import path, include
 from home_app.views import render_home
 from user.views import render_login
 from user.views import render_registration
-
+from subscribes.views import render_subs
+from my_qrs.views import render_my_qrs
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create_qrc/', render_create_qrc, name= "create_qr"),
+    path('create_qrc/', render_create_qrc, name= "generate"),
     path('', render_home, name = 'home'),
     path('user/', include("user.urls")),
+    path('subscribes/', render_subs, name = 'subscribes'),
+    path('my_qrs/', render_my_qrs, name = 'my_qrs')
 ]

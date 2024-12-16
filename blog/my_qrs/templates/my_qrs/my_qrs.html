@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Підписки
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'my_qrs/css/my_qrs.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h2>Мої QR-Codes:</h2>
+    <div class="qr-codes">
+        <div class="qrcode">
+            <img src="" alt="qrcode" style="width: 350px; height:350px;">
+            <p class="date-creation">Date: 11.09.2001</p>
+            <p class="title-qr-code">Відеокарта</p>
+            <button class="download">Download</button>
+        </div>
+
+        <div class="qrcode">
+            <img src="" alt="qrcode" style="width: 350px; height:350px;">
+            <p class="date-creation">Date: 11.09.2001</p>
+            <p class="title-qr-code">Відеокарта</p>
+            <button class="download">Download</button>
+        </div>
+        
+        <div class="qrcode">
+            <img src="" alt="qrcode" style="width: 350px; height:350px;">
+            <p class="date-creation">Date: 11.09.2001</p>
+            <p class="title-qr-code">Відеокарта</p>
+            <button class="download">Download</button>
+        </div>
+    </div>
+{% endblock %}

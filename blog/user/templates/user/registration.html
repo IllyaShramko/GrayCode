@@ -1,21 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}
-    Login
+    registration
 {% endblock %}    
 
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'user/css/registration.css' %}">
+{% endblock %}    
+
+
+
 {% block content %}
-    <!-- <header>
-        <img src="{% static 'user/images/logo' %}" alt="">
-        <p class="name">QRCode Aqua</p>
-        <a href="" class="log">LOG IN</a>
-        <a href="" class="reg">SIGN UP</a>
-    </header> -->
     <form method="post" class="registration">
-        <h1>SIGN UP</h1>
-        <input type="text", title="Username">
-        <input type="email", title="Email">
-        <input type="password", title="Password">
-        <button type="submit">Submit</button>
+        {% csrf_token %}  
+        {% if not confirm %}
+            <h1>SIGN UP</h1>
+            <input type="text" placeholder="Username *">
+            <input type="email" placeholder="Email *">
+            <input type="password" placeholder="Password *">
+            <button type="submit">Submit</button>
+        {% else %}
+            <h2>Успішна реєстрація</h2>
+            <a href="{% url 'login' %}" style="color:black; text-transform:none">Авторизація</a>
+        {% endif %}
     </form>
 {% endblock %}

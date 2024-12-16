@@ -11,21 +11,15 @@
 {% endblock %}
 
 {% block content %}
-    <!-- <div class="welcome-text">
-        <p>
-            На цьому сайті можно
-        </p>
-        <p>
-            створити кастомний 
-        </p>
-        <p>
-            QR-Code.
-        </p>
-        <p>
-            Щоб почати створювати
-        </p>
-        <p>
-            потрібно авторизуватись
-        </p>
-    </div> -->
+    {% if not is_auth %}
+        <div class="welcome-text">
+            <p>На цьому сайті можно</p>
+            <p>створити кастомний</p>
+            <p>QR-Code.</p>
+            <p>Щоб почати створювати</p>
+            <p>потрібно aавторизуватись</p>
+        </div>
+    {% else %}
+        <h1 class="home-page-text">Головна сторінка</h1>
+    {% endif %}
 {% endblock %}

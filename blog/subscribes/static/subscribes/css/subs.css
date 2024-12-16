@@ -1,0 +1,81 @@
+.subscribes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    gap: 2px;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 10px;
+    width: 400px;
+    height: 452px;
+    padding-left: 50px;
+}
+h3 {
+    font-family: 'Inter';
+    font-size: 55px;
+    line-height: 69px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+li {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #FFFFFF;
+}
+.line-between-divs {
+    width: 0px;
+    height: 400px;
+    border: 5px solid #FFFFFF;
+}
+.username {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+}
+.already-used {
+    font-family: 'Inter';
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+.subscibea {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 265px;
+    height: 62px;
+    background: #82A9F2;
+    border: 3px solid #000000;
+    border-radius: 30px;
+    font-family: 'Inter';
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.subscibea:hover {
+    background: #5B8CE7;
+}

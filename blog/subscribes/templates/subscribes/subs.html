@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Підписки
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'subscribes/css/subs.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="subscribes">
+        <div class="subscribe s1">
+            <h3 class="title-of-subscribe">base</h3>
+            <p class="description">
+                <ul>
+                    <li>Max 1 standard Qr-code per 6 mouths</li>
+                    <li>Custom QR-Code cannot be created</li>
+                </ul>
+            </p>
+            <p class="already-used">already used</p>
+        </div>
+
+        <div class="line-between-divs"></div>
+
+        <div class="subscribe s2">
+            <h3 class="title-of-subscribe">standart</h3>
+            <p class="description">
+                <ul>
+                    <li>10 custom QR-Codes for month</li>
+                    <li>2$/Month</li>
+                </ul>
+            </p>
+            <button class="subscibea">subscibe</button>
+        </div>
+
+        <div class="line-between-divs"></div>
+
+        <div class="subscribe s3">
+            <h3 class="title-of-subscribe">pro</h3>
+            <p class="description">
+                <ul>
+                    <li>100 custom QR-Codes for month</li>
+                    <li>10$/Month</li>
+                </ul>
+            </p>
+            <button class="subscibea">subscibe</button>
+        </div>
+    </div>
+{% endblock %}
