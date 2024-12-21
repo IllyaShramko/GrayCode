@@ -1,7 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-}
 header {
     display: flex;
     flex-direction: row;
@@ -11,22 +7,18 @@ header {
     background: #5B8CE7;
 }
 a {
-    height: 48px;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
     text-decoration-line: underline;
     color: #FFFFFF;
-    gap: 0px 0px 0px 36px;
 }
 img {
     width: 94px;
     height: 64px;
 }
 p {
-    width: 433px;
-    height: 77px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -39,8 +31,10 @@ p {
     padding: 0px 10px 0px 10px;
 }
 .urls {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
     width: 100vw;
     height: 0px;
-    display: flex;
-    justify-content: flex-end;
+    padding: 0px 36px 0px 36px;
 }
