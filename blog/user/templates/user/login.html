@@ -19,5 +19,8 @@
         <input type="text" name="username" placeholder="Username *">
         <input type="password" name="password" placeholder="Password *">
         <button name="submit">Submit</button>
+        {% if error %}
+            <p style="color: red; font-family: 'Inter'; font-size: 30px;">Username or Password is incorect</p>
+        {% endif %}
     </form>
 {% endblock %}
