@@ -38,3 +38,40 @@ p {
 
 
 }
+h2 {
+    font-family: 'Inter';
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    gap: 10px;
+}
+.links-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 5px;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+.image-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: #FFFFFF;
+    border-radius: 45px;
+}
