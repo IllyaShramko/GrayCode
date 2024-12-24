@@ -1,13 +1,50 @@
 {% extends "base.html" %}
+
 {% load static %}
+
 {% block title %}
     Головна сторінка
 {% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="{% static 'home_app/css/home.css' %}">
 {% endblock %}
 
 {% block content %}
-    
+    {% if not is_auth %}
+        <div class="welcome-text">
+            <p>На цьому сайті можно</p>
+            <p>створити кастомний</p>
+            <p>QR-Code.</p>
+            <p>Щоб почати створювати</p>
+            <p>потрібно aавторизуватись</p>
+        </div>
+    {% else %}
+        <h1 class="home-page-text">Головна сторінка</h1>
+        <div class="contacts">
+            <h2>Служба Підтримки</h2>
+            <div class="links-contacts">
+                <div class="contact">
+                    <div class="image-bg">
+                        <img style="width: 60%; height: 60%" class="image-contact" src="{% static 'home_app/imgs/instagram.png' %}">
+                    </div>
+                    <a style="font-family: 'Inter'; font-size: 32px; text-transform: none;" class="link-contact" href="https://www.instagram.com/world.it.academy/?igsh=d2FyM25qajBkZzFq">@world.it.academy</a>
+                </div>
+
+                <div class="contact">        
+                    <div class="image-bg">
+                        <img style="width: 80%; height: 80%" class="image-contact" src="{% static 'home_app/imgs/telegram.png' %}">
+                    </div>            
+                    <a style="font-family: 'Inter'; font-size: 32px; text-transform: none;" class="link-contact" href="/">@timurkoshel</a>
+                </div>
+
+                <div class="contact">
+                    <div class="image-bg">
+                        <img style="width: 70%; height: 55%" class="image-contact" src="{% static 'home_app/imgs/gmail.png' %}">
+                    </div>
+                    <a style="font-family: 'Inter'; font-size: 32px; text-transform: none;" class="link-contact" href="/" >QRCode.Aqua@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}
