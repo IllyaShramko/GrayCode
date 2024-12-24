@@ -12,23 +12,24 @@
 
 {% block content %}
         <form method="post">
+            {% csrf_token %}
             <div class="config">
                 <!-- Inputs -->
                 <div class="inputs">
-                    <input type="text" placeholder="NAME *">
-                    <input type="text" placeholder="URL *">
+                    <input type="text" name="name" placeholder="NAME *">
+                    <input type="text" name="url" placeholder="URL *" required>
                 </div>
                 <!-- Color Config -->
                 <div class="color">
                     <h2>Колір QR-Code:</h2>
                     <div>
                         <div class="color-qr"></div>
-                        <input type="text" placeholder="#000000">
+                        <input type="text" name="fill_color" placeholder="#000000" required>
                     </div>
                     <h2>Колір фону:</h2>
                     <div>
                         <div class="color-bg"></div>
-                        <input type="text" placeholder="#FFFFFF">
+                        <input type="text" name="back_color" placeholder="#FFFFFF" required>
                     </div>
                 </div>
                 <!-- Icons -->
