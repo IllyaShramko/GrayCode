@@ -23,12 +23,12 @@ h2 {
 .date-creation {
     /* Date: 11.09.2001 */
 
-font-family: 'Inter';
-font-size: 40px;
-line-height: 48px;
-text-align: center;
+    font-family: 'Inter';
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 .title-qr-code {
     /* Відеокарта RTX 5090 */
@@ -68,4 +68,36 @@ color: #FFFFFF;
     gap: 10px;
     font-family: "Inter";
     font-size: 20px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 1100px;
+}
+.filters {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    justify-content: center;
+    align-items: center;    
+}
+.filter {
+    font-family: 'Inter';
+    font-size: 500;
+    font-size: 35px;
+    padding: 5px;
+    padding-top: 0px;
+    background-color: #C2C2C2;
+    height: 100%;
+    width: 100px;
+    border-radius: 15px 0px 0px 15px;
+}
+.filter_input{
+    font-family: 'Inter';
+    font-size: 500;
+    font-size: 25px;
+    height: 100%;
+    width: 150px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
 }
