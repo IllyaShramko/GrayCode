@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.db.utils import IntegrityError
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 
@@ -38,4 +38,7 @@ def render_registration(request):
             error = 'password_error'
         print(confirm)
     return render(request, "user/registration.html", context={"is_auth": False, "confirm": confirm, "error": error, 'username': request.user})    
-
+#g
+def logout_user(request):
+    logout(request)
+    return redirect("/")

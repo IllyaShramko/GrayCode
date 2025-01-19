@@ -8,12 +8,12 @@ body{
 }
 .without-auth {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 160px;
     background-color: #5B8CE7;
     justify-content: center;
     align-items: center;
-    gap: 270px;
+    /* gap: 270px; */
     padding: 40px;
 
 }
@@ -27,10 +27,14 @@ img {
     height: 90px;
 }
 .links {
+    position: absolute;
+    right: 55px;
+    top: 25px;
     display: flex;
     align-items: center;
     height: 120px;
-    gap: 22px;
+    /* width: 50%; */
+    gap: 30px;
 }
 a {
     color: white;
@@ -41,6 +45,9 @@ a {
     color: #FFFFFF;
 }
 .logo-title {
+    position: absolute;
+    left: 55px;
+    top: 25px;
     display: flex;
     align-items: center;
     height: 120px;
@@ -48,4 +55,24 @@ a {
 }
 .username {
     color: #FFFFFF;
+    /* username */
+
+    width: 225px;
+    height: 48px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    /* text-transform: uppercase; */
+
+}
+.logout-url {
+    width: 60px;
+    height: 50px;
+}
+.logout-image {
+    width: 100%;
+    height: 100%;
 }

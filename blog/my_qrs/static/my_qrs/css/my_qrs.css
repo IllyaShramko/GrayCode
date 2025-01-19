@@ -3,15 +3,10 @@ h2 {
     font-size: 48px;
     line-height: 58px;
     color: #FFFFFF;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
-.username {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 55px;
-    text-align: center;
-    color: #FFFFFF;
+.my-qrs-url {
+    font-weight: 600;
 }
 .qr-codes {
     display: flex;
@@ -70,9 +65,12 @@ h2 {
     font-size: 20px;
 }
 .header {
+    margin: auto;
     display: flex;
-    flex-direction: row;
-    gap: 1100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 .filters {
     display: flex;
@@ -87,7 +85,7 @@ h2 {
     font-size: 35px;
     padding: 5px;
     padding-top: 0px;
-    background-color: #C2C2C2;
+    background-color: #FFFFFF;
     height: 100%;
     width: 100px;
     border-radius: 15px 0px 0px 15px;
@@ -97,7 +95,18 @@ h2 {
     font-size: 500;
     font-size: 25px;
     height: 100%;
-    width: 150px;
-    border-radius: 0px 15px 15px 0px;
+    width: 250px;
+    border-radius: 0px;
     border: none;
+}
+.search_button {
+    width: 45px;
+    height: 45px;
+    border: 0px;
+    background-color: #FFFFFF;
+    border-radius: 0px 15px 15px 0px;
+}
+.search_img {
+    width: 40px;
+    height: 40px;
 }

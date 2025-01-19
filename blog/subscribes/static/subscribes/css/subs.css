@@ -1,3 +1,6 @@
+.subscribe-url {
+    font-weight: 600;   
+}
 .subscribes {
     display: flex;
     flex-direction: row;

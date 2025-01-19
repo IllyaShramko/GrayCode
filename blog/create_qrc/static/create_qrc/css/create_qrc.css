@@ -1,10 +1,5 @@
-.username {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 55px;
-    text-align: center;
-    color: #FFFFFF;
+.generate-url {
+    font-weight: 600;   
 }
 form {
 
