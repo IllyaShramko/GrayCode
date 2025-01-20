@@ -49,15 +49,14 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 350px;
     gap: 10px;
 }
 .links-contacts {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
-    gap: 5px;
+    gap: 30px;
 }
 .contact {
     display: flex;
