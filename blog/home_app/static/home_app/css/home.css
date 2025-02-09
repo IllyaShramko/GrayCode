@@ -44,11 +44,13 @@ h2 {
     color: #FFFFFF;
 }
 .contacts {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
     margin-top: 350px;
     gap: 10px;
 }
@@ -63,7 +65,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
+    
 }
 .image-bg {
     display: flex;

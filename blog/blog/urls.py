@@ -22,6 +22,8 @@ from user.views import render_login
 from user.views import render_registration
 from subscribes.views import render_subs
 from my_qrs.views import render_my_qrs
+from . import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('create_qrc/', render_create_qrc, name= "generate"),
@@ -30,3 +32,6 @@ urlpatterns = [
     path('subscribes/', render_subs, name = 'subscribes'),
     path('my_qrs/', render_my_qrs, name = 'my_qrs')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

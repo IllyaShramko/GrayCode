@@ -22,7 +22,20 @@
         </div>
     </div>
     <div class="qr-codes">
-        <div class="qrcode">
+        {% if qrcodes %}
+            {% for qrcode in qrcodes %}
+                <div class="qrcode">
+                    <img src="{{ qrcode.qrcode_img.url }}" style="width: 350px; height:350px;">
+                    <p class="date-creation">Date: {{ qrcode.date }}</p>
+                    <p class="title-qr-code">{{ qrcode.name }}</p>
+                    <button class="download">Download</button>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h5 class="without-qrcodes">У вас немає жодного QRкода</h5>
+        {% endif %}
+        
+        <!-- <div class="qrcode">
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="qrcode" style="width: 350px; height:350px;">
             <p class="date-creation">Date: 11.09.2001</p>
             <p class="title-qr-code">Відеокарта</p>
@@ -41,6 +54,6 @@
             <p class="date-creation">Date: 11.09.2001</p>
             <p class="title-qr-code">Відеокарта</p>
             <button class="download">Download</button>
-        </div>
+        </div> -->
     </div>
 {% endblock %}

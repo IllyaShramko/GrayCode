@@ -92,7 +92,7 @@ form {
     font-family: 'Inter';
     font-size: 24px;
 }
-.icons button{
+.icon{
     display: flex;
     justify-content: center;
     align-items: center;

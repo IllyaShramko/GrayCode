@@ -10,6 +10,7 @@ h2 {
 }
 .qr-codes {
     display: flex;
+    /* width: 98vw; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -109,4 +110,11 @@ h2 {
 .search_img {
     width: 40px;
     height: 40px;
+}
+h5 {
+    font-family: "Inter";
+    color: #FFFFFF;
+    font-size: 48px;
+    line-height: 58px;
+    margin-top: 100px;
 }

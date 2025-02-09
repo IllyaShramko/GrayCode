@@ -11,66 +11,49 @@
 {% endblock %}
 
 {% block content %}
-        <form method="post">
-            {% csrf_token %}
-            <div class="config">
-                <!-- Inputs -->
-                <div class="inputs">
-                    <input type="text" name="name" placeholder="NAME *">
-                    <input type="text" name="url" placeholder="URL *" required>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="config">
+            <!-- Inputs -->
+            <div class="inputs">
+                <input type="text" name="name" placeholder="NAME *">
+                <input type="text" name="url" placeholder="URL *" required>
+            </div>
+            <!-- Color Config -->
+            <div class="color">
+                <h2>Колір QR-Code:</h2>
+                <div>
+                    <div class="color-qr"></div>
+                    <input type="text" name="fill_color" placeholder="#000000" required>
                 </div>
-                <!-- Color Config -->
-                <div class="color">
-                    <h2>Колір QR-Code:</h2>
-                    <div>
-                        <div class="color-qr"></div>
-                        <input type="text" name="fill_color" placeholder="#000000" required>
-                    </div>
-                    <h2>Колір фону:</h2>
-                    <div>
-                        <div class="color-bg"></div>
-                        <input type="text" name="back_color" placeholder="#FFFFFF" required>
-                    </div>
-                </div>
-                <!-- Icons -->
-                <h2>Виберіть зображення для QR-Code:</h2>
-                <div class="icons">
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
-                    <button class="icon">
-                        <img src="" alt="img">
-                    </button>
+                <h2>Колір фону:</h2>
+                <div>
+                    <div class="color-bg"></div>
+                    <input type="text" name="back_color" placeholder="#FFFFFF" required>
                 </div>
             </div>
-            <!--  -->
-            <div class="preview-qr">
-                <img src="{% static 'create_qrc/imgs/qrcode.png' %}" alt="QRCODE" class="qrcode-img">
-                <div class="sizes">
-                    <h3 class="size">512px</h3>
-                    <h3 class="size">1024px</h3>
-                    <h3 class="size">2048px</h3>
-                </div>
-                <img class="size" src="{% static 'create_qrc/imgs/sizer.png' %}" alt="size">
-                <div class="buttons">
-                    <button type="submit" class="generate">Generate</button>
-                    <button class="download">Download</button>
-                </div>
+            <!-- Icons -->
+            <h2>Виберіть зображення для QR-Code:</h2>
+            <div class="icons">
+                <button class="icon">
+                    <img src="" alt="img">
+                </button>
+                <input type="file" class="icon" name="icon_in_center">
             </div>
-        </form>
+        </div>
+        <!--  -->
+        <div class="preview-qr">
+            <img src="{{ qrcode.qrcode_img.url }}" alt="QRCODE" class="qrcode-img">
+            <div class="sizes">
+                <h3 class="size">512px</h3>
+                <h3 class="size">1024px</h3>
+                <h3 class="size">2048px</h3>
+            </div>
+            <img class="size" src="{% static 'create_qrc/imgs/sizer.png' %}" alt="size">
+            <div class="buttons">
+                <button type="submit" class="generate">Generate</button>
+                <button class="download">Download</button>
+            </div>
+        </div>
+    </form>
 {% endblock %}

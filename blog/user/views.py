@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from .models import Profile
 from django.db.utils import IntegrityError
 from django.contrib.auth import authenticate, login, logout
 
@@ -29,16 +30,18 @@ def render_registration(request):
         password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
         if password == confirm_password:
-            try:
-                User.objects.create_user(username= username, password= password)
+            # try:
+                # User.objects.create_user(username= username, password= password)
+                Profile.objects.create(user= User.objects.create_user(username= username, password= password))
+                
                 confirm = True
-            except:
-                error = 'username_error'
+            # except:
+                # error = 'username_error'
         else:
             error = 'password_error'
         print(confirm)
     return render(request, "user/registration.html", context={"is_auth": False, "confirm": confirm, "error": error, 'username': request.user})    
-#g
+# gl hf
 def logout_user(request):
     logout(request)
     return redirect("/")
