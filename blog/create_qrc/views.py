@@ -7,39 +7,41 @@ import qrcode, os
 from PIL import Image
 from qrcode.image.styles.moduledrawers import GappedSquareModuleDrawer, CircleModuleDrawer, SquareModuleDrawer,RoundedModuleDrawer, VerticalBarsDrawer, HorizontalBarsDrawer
 from qrcode.image.styledpil import StyledPilImage
+from qrcode.image.styles.colormasks import SolidFillColorMask, RadialGradiantColorMask
 
+from PIL import ImageColor
 # Create your views here.
-
+def hex_to_rgb(hex_color):
+    hex_color = hex_color.lstrip("#")
+    return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+modules_driwer = {
+    "square": SquareModuleDrawer(),
+    "gapped": GappedSquareModuleDrawer(),
+    "circle": CircleModuleDrawer(),
+    "rounded": RoundedModuleDrawer(),
+    "vertical": VerticalBarsDrawer(),
+    "horizontal": HorizontalBarsDrawer()
+}
 def render_create_qrc(request):
     
     if request.method == "POST":
         name = request.POST.get('name')
         url = request.POST.get('url')
-        fill_color = request.POST.get('fill_color')
-        back_color = request.POST.get('back_color')
+        fill_color_hex = request.POST.get('fill_color')
+        back_color_hex = request.POST.get('back_color')
         icon_in_center = request.FILES.get('icon_in_center')
         size_qrcode = request.POST.get('size')
         module_driwer_type = request.POST.get('body')
-        
-        if module_driwer_type == "square":
-            module_driwer = SquareModuleDrawer()
-        elif module_driwer_type == "gapped":
-            module_driwer = GappedSquareModuleDrawer()
-        elif module_driwer_type == "circle":
-            module_driwer = CircleModuleDrawer()
-        elif module_driwer_type == "rounded":
-            module_driwer = RoundedModuleDrawer()
-        elif module_driwer_type == "vertical":
-            module_driwer = VerticalBarsDrawer()
-        elif module_driwer_type == "horizontal":
-            module_driwer = HorizontalBarsDrawer()
-        
+        # 
+        fill_color = hex_to_rgb(fill_color_hex)
+        back_color = hex_to_rgb(back_color_hex)
+        # 
         if size_qrcode == "256px":
-            def_size_qrcode = 20
+            def_size_qrcode = 10
         elif size_qrcode == "512px":
-            def_size_qrcode = 30
+            def_size_qrcode = 20
         elif size_qrcode == "1028px":
-            def_size_qrcode = 40
+            def_size_qrcode = 30
         else:
             def_size_qrcode = 10
 
@@ -51,32 +53,36 @@ def render_create_qrc(request):
         QRcode.save()
 
         qr = qrcode.QRCode(
-            version=2,
+            version=1,
             error_correction= qrcode.ERROR_CORRECT_H,
             border=2,
             box_size=def_size_qrcode
         )
 
         qr.add_data(url)
+        qr.make(fit=True)
 
         if icon_in_center:
             image_path = os.path.join("images", "icons", icon_in_center.name)
             file_system = FileSystemStorage()
             file_system.save(image_path, icon_in_center)
             qr_view = qr.make_image(
-                module_drawer= module_driwer,
                 image_factory=StyledPilImage,
+                module_drawer= modules_driwer[module_driwer_type],
                 embeded_image_path= os.path.abspath(__file__ + f"/../../media/{image_path}"),
-                fill_color= fill_color,
-                back_color= back_color,
+                color_mask=SolidFillColorMask(front_color=fill_color, back_color=back_color)
             )
         else:
+            print("1")
             qr_view = qr.make_image(
-                module_drawer= module_driwer,
                 image_factory=StyledPilImage,
-                fill_color= fill_color,
-                back_color= back_color,
+                module_drawer= modules_driwer[module_driwer_type],
+                color_mask= SolidFillColorMask(front_color= fill_color, back_color=back_color)
             )
+
+
+        print(qr_view)
+        print(back_color)
         qr_view.save(os.path.abspath(__file__ + "/../static/create_qrc/images/qrcode.png"))
         try:
             os.mkdir(os.path.abspath(__file__ + f"/../../media/images/qrcodes/{request.user.username}"))

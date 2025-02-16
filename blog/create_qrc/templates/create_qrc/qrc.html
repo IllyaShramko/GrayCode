@@ -32,15 +32,15 @@
                         <div class="color-qr"></div>
                         <input type="color" class="color-qr1 color" name="fill_color"  value="#FFFFFF">
                     {% endif %}
-                    <p class="text-color qr-color">#FFFFFF</p>
+                    <p class="text-color qr-color">#ffffff</p>
                 </div>
                 <h2>Колір фону:</h2>
                 <div>
                     {% if type_sub != "base" %}
-                        <input type="color" class="color-bg color" name="back_color">
+                        <input type="color" class="color-bg color" name="back_color" value="#000000">
                     {% else %}
                         <div class="color-bg"></div>
-                        <input type="color" class="color-bg1 color" name="back_color">
+                        <input type="color" class="color-bg1 color" name="back_color" value="#000000">
                     {% endif %}
                     <p class="text-color bg-color">#000000</p>
                 </div>
@@ -104,38 +104,40 @@
         <!--  -->
         <div class="preview-qr">
             <img src="{% static 'create_qrc/images/qrcode.png' %}" alt="QRCODE" class="qrcode-img">
-            {% if type_sub == "base" %}
-                <h3 class="block-size-qrcode">Недоступна функція</h3>
-            {% else %}
-                <h3 class="block-size-qrcode">Змінити розмір qrcode</h3>
-            {% endif %}
-            <fieldset>
-                <!--  -->
+            <div class="sizes-div">
                 {% if type_sub == "base" %}
-                    <div>
-                        <input type="radio" id="256px" name="size" value="256px" checked>
-                        <label for="256px">256px</label>
-                    </div>
+                    <h3 class="block-size-qrcode">Недоступна функція</h3>
                 {% else %}
+                    <h3 class="block-size-qrcode">Змінити розмір qrcode</h3>
+                {% endif %}
+                <fieldset>
+                    <!--  -->
+                    {% if type_sub == "base" %}
+                        <div>
+                            <input type="radio" id="256px" name="size" value="256px" checked>
+                            <label for="256px">256px</label>
+                        </div>
+                    {% else %}
+                        <div>
+                            <input type="radio" id="256px" name="size" value="256px" required>
+                            <label for="256px">256px</label>
+                        </div>
+                    {% endif %}
+                    <!--  -->
                     <div>
-                        <input type="radio" id="256px" name="size" value="256px" required>
-                        <label for="256px">256px</label>
+                        <input type="radio" id="512px" name="size" value="512px"/>
+                        <label for="512px">512px</label>
                     </div>
-                {% endif %}
-                <!--  -->
-                <div>
-                    <input type="radio" id="512px" name="size" value="512px"/>
-                    <label for="512px">512px</label>
-                </div>
-                <!--  -->
-                <div>
-                    <input type="radio" id="1028px" name="size" value="1028px"/>
-                    <label for="1028px">1028px</label>
-                </div>
-                {% if type_sub == "base" %}
-                    <div class="block-size-qrcode-div"></div>
-                {% endif %}
-            </fieldset>
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="1028px" name="size" value="1028px"/>
+                        <label for="1028px">1028px</label>
+                    </div>
+                    {% if type_sub == "base" %}
+                        <div class="block-size-qrcode-div"></div>
+                    {% endif %}
+                </fieldset>
+            </div>
             <div class="buttons">
                 <button type="submit" class="generate">Generate</button>
                 <button class="download">Download</button>
