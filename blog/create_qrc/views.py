@@ -23,7 +23,10 @@ modules_driwer = {
     "horizontal": HorizontalBarsDrawer()
 }
 def render_create_qrc(request):
-    
+    try:
+        os.mkdir(os.path.abspath(__file__ + f"/../../media/images/qrcodes"))
+    except:
+        print("Error Make Base Qrcodes Mkdir | 29")
     if request.method == "POST":
         name = request.POST.get('name')
         url = request.POST.get('url')
