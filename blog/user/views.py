@@ -30,13 +30,14 @@ def render_registration(request):
         password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
         if password == confirm_password:
-            # try:
+            try:
                 # User.objects.create_user(username= username, password= password)
                 Profile.objects.create(user= User.objects.create_user(username= username, password= password))
                 
                 confirm = True
-            # except:
-                # error = 'username_error'
+            except Exception as e:
+                print(e)
+                error = 'username_error'
         else:
             error = 'password_error'
         print(confirm)

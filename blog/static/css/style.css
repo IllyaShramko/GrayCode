@@ -3,28 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 body{
     background-color: #5B8CE7;
 }
 .without-auth {
     display: flex;
-    width: 100vw;
+    width: 98vw;
     height: 160px;
     background-color: #5B8CE7;
     justify-content: center;
     align-items: center;
-    /* gap: 270px; */
     padding: 40px;
-
 }
 .title{
     color: #FFFFFF;
-    font-size: 60px;
+    font-size: 50px;
     font-family: "Inter";
 }
 img {
-    width: 120px;
-    height: 90px;
+    width: 100px;
+    height: 75px;
 }
 .links {
     position: absolute;
@@ -43,6 +44,7 @@ a {
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
+    text-decoration: none;
 }
 .logo-title {
     position: absolute;

@@ -10,28 +10,26 @@ h2 {
 }
 .qr-codes {
     display: flex;
-    /* width: 98vw; */
+    width: 100%;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    gap: 20px;
+    padding: 30px;
+    gap: 25px;
 }
 .date-creation {
-    /* Date: 11.09.2001 */
-
     font-family: 'Inter';
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 30px;
+    /* line-height: 48px; */
     text-align: center;
 
     color: #FFFFFF;
 }
 .title-qr-code {
-    /* Відеокарта RTX 5090 */
-
     font-family: 'Inter';
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 38px;
+    line-height: 45px;
     text-align: center;
 
     color: #FFFFFF;
@@ -58,10 +56,11 @@ h2 {
 }
 .qrcode {
     display: flex;
+    width: 310px;
     flex-direction: column;
     align-items: center;
     padding: 15px 0px;
-    gap: 10px;
+    gap: 5px;
     font-family: "Inter";
     font-size: 20px;
 }
@@ -94,9 +93,9 @@ h2 {
 .filter_input{
     font-family: 'Inter';
     font-size: 500;
-    font-size: 25px;
+    font-size: 20px;
     height: 100%;
-    width: 250px;
+    width: 500px;
     border-radius: 0px;
     border: none;
 }
@@ -110,6 +109,10 @@ h2 {
 .search_img {
     width: 40px;
     height: 40px;
+}
+.without-qrcodes-div {
+    margin: auto;
+    display: flex;
 }
 h5 {
     font-family: "Inter";

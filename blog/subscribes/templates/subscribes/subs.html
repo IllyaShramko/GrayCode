@@ -20,7 +20,14 @@
                     <li>Custom QR-Code cannot be created</li>
                 </ul>
             </p>
-            <p class="already-used">already used</p>
+            {% if type_sub == "base" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="base" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
         </div>
 
         <div class="line-between-divs"></div>
@@ -33,7 +40,14 @@
                     <li>2$/Month</li>
                 </ul>
             </p>
-            <button class="subscibea">subscibe</button>
+            {% if type_sub == "standart" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="standart" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
         </div>
 
         <div class="line-between-divs"></div>
@@ -46,7 +60,14 @@
                     <li>10$/Month</li>
                 </ul>
             </p>
-            <button class="subscibea">subscibe</button>
+            {% if type_sub == "pro" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="pro" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
