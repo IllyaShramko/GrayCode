@@ -24,6 +24,7 @@ modules_driwer = {
 }
 def render_create_qrc(request):
     try:
+        # os.mkdir(os.path.abspath(__file__ + f"/../../media/images"))
         os.mkdir(os.path.abspath(__file__ + f"/../../media/images/qrcodes"))
     except:
         print("Error Make Base Qrcodes Mkdir | 29")
@@ -39,12 +40,13 @@ def render_create_qrc(request):
         fill_color = hex_to_rgb(fill_color_hex)
         back_color = hex_to_rgb(back_color_hex)
         # 
+        print(fill_color, back_color)
         if size_qrcode == "256px":
             def_size_qrcode = 10
         elif size_qrcode == "512px":
-            def_size_qrcode = 20
+            def_size_qrcode = 10
         elif size_qrcode == "1028px":
-            def_size_qrcode = 30
+            def_size_qrcode = 20
         else:
             def_size_qrcode = 10
 
@@ -72,17 +74,16 @@ def render_create_qrc(request):
             qr_view = qr.make_image(
                 image_factory=StyledPilImage,
                 module_drawer= modules_driwer[module_driwer_type],
-                embeded_image_path= os.path.abspath(__file__ + f"/../../media/{image_path}"),
-                color_mask=SolidFillColorMask(front_color=fill_color, back_color=back_color)
+                embeded_image_path= os.path.abspath(__file__ + f"/../../media/{image_path}")
             )
         else:
             print("1")
             qr_view = qr.make_image(
                 image_factory=StyledPilImage,
-                module_drawer= modules_driwer[module_driwer_type],
-                color_mask= SolidFillColorMask(front_color= fill_color, back_color=back_color)
+                module_drawer= modules_driwer[module_driwer_type]
             )
-
+        print("2")
+        SolidFillColorMask(front_color=back_color, back_color=fill_color).apply_mask(qr_view)
 
         print(qr_view)
         print(back_color)
