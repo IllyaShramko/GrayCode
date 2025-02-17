@@ -1,4 +1,3 @@
-
 from django.shortcuts import render
 from .models import QRcodes
 from user.models import Profile
@@ -8,8 +7,11 @@ from PIL import Image
 from qrcode.image.styles.moduledrawers import GappedSquareModuleDrawer, CircleModuleDrawer, SquareModuleDrawer,RoundedModuleDrawer, VerticalBarsDrawer, HorizontalBarsDrawer
 from qrcode.image.styledpil import StyledPilImage
 from qrcode.image.styles.colormasks import SolidFillColorMask, RadialGradiantColorMask
+from django.contrib.auth.decorators import login_required
+
 
 from PIL import ImageColor
+
 # Create your views here.
 def hex_to_rgb(hex_color):
     hex_color = hex_color.lstrip("#")
@@ -22,9 +24,9 @@ modules_driwer = {
     "vertical": VerticalBarsDrawer(),
     "horizontal": HorizontalBarsDrawer()
 }
+@login_required
 def render_create_qrc(request):
     try:
-        # os.mkdir(os.path.abspath(__file__ + f"/../../media/images"))
         os.mkdir(os.path.abspath(__file__ + f"/../../media/images/qrcodes"))
     except:
         print("Error Make Base Qrcodes Mkdir | 29")

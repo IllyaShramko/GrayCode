@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from user.models import Profile
 # Create your views here.
+from django.contrib.auth.decorators import login_required
+@login_required
 
 def render_subs(request):
     profiles = Profile.objects.filter(user_id= request.user.id)
