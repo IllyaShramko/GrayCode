@@ -14,11 +14,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from create_qrc.views import render_create_qrc
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from home_app.views import render_home
-
+from user.views import render_login
+from user.views import render_registration
+from subscribes.views import render_subs
+from my_qrs.views import render_my_qrs
+from . import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', render_home, name = 'home')
+    path('create_qrc/', render_create_qrc, name= "generate"),
+    path('', render_home, name = 'home'),
+    path('user/', include("user.urls")),
+    path('subscribes/', render_subs, name = 'subscribes'),
+    path('my_qrs/', render_my_qrs, name = 'my_qrs')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

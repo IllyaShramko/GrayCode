@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 160px;
+    background: #5B8CE7;
+}
+a {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+img {
+    width: 94px;
+    height: 64px;
+}
+p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 0px 10px 0px 10px;
+}
+.urls {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 0px;
+    padding: 0px 36px 0px 36px;
+}

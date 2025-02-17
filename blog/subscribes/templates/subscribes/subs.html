@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Підписки
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'subscribes/css/subs.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="subscribes">
+        <div class="subscribe s1">
+            <h3 class="title-of-subscribe">base</h3>
+            <p class="description">
+                <ul>
+                    <li>Max 1 standard Qr-code per 6 mouths</li>
+                    <li>Custom QR-Code cannot be created</li>
+                </ul>
+            </p>
+            {% if type_sub == "base" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="base" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
+        </div>
+
+        <div class="line-between-divs"></div>
+
+        <div class="subscribe s2">
+            <h3 class="title-of-subscribe">standart</h3>
+            <p class="description">
+                <ul class="des2">
+                    <li>10 custom QR-Codes for month</li>
+                    <li>2$/Month</li>
+                </ul>
+            </p>
+            {% if type_sub == "standart" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="standart" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
+        </div>
+
+        <div class="line-between-divs"></div>
+
+        <div class="subscribe s3">
+            <h3 class="title-of-subscribe">pro</h3>
+            <p class="description">
+                <ul class="des2">
+                    <li>100 custom QR-Codes for month</li>
+                    <li>10$/Month</li>
+                </ul>
+            </p>
+            {% if type_sub == "pro" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="pro" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
