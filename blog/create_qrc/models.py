@@ -9,7 +9,7 @@ class QRcodes(models.Model):
     qrcode_img = models.ImageField(upload_to='images/qrcodes')
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     url = models.TextField()
-    date_delete = models.DateTimeField(auto_now=True)
+    date_delete = models.DateTimeField()
 
     def __str__(self):
         return self.name
