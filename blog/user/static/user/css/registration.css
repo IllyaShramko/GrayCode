@@ -52,3 +52,6 @@ h2 {
     font-family: "Inter";
     font-size: 64px;
 }
+.registration-url {
+    font-weight: 600;   
+}

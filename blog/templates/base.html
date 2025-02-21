@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -7,25 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
         {% block head %}{% endblock %}
-        <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
-        <header>
-            {% if not is_auth %}
-                <img src="{% static 'base/images/logo.png' %}" alt="">
-                <p>QRCode Auqa</p>
-                <div class="urls">
-                    <a href="{% url 'registration' %}">Sign up</a>
-                    <a href="{% url 'login' %}">Login</a>
+        <header class="without-auth">
+            <div class="logo-title">
+                <img src="{% static 'images/wave.png' %}" alt="">
+                <a href="/" style="text-decoration: none; text-transform:none;">
+                    <h1 class="title">QRCode Aqua</h1>
+                </a>
+            </div> 
+                <div class="links">
+                    {% if not is_auth %}
+                        <a href="{% url 'login' %}" class="login-url">Log in</a>
+                        <a href="{% url 'registration' %}" class="registration-url">Sign Up</a>
+                    {% else %}
+                        <a href="{% url 'generate' %}" class="generate-url">Generate</a>
+                        <a href="{% url 'my_qrs' %}" class="my-qrs-url">My qrs</a>
+                        <a href="{% url 'subscribes' %}" class="subscribe-url">Subscribe</a>
+                        <p class="username">{{ username  }}</p>
+                        <a href="{% url 'logout' %}" class = "logout-url"><img class = "logout-image" src="{% static 'images/logout.png' %}" alt="logout"></a>
+                    {% endif %}
                 </div>
-            {% else %}
-                {#
-                <a href="{% url 'my_qr' %}"></a>
-                <a href="{% url 'contacts' %}"></a>
-                <a href="{% url 'subscribe' %}"></a>
-                #}
-            {% endif %}
-        </header>
+            </header>
         {% block content %}
         
         {% endblock %}

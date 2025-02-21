@@ -1,14 +1,148 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create QR-code</title>
-</head>
-    <body>
-        <form method="post">
-            <h1>Create QR-code</h1>
-            <input type="text", title="Your url">
-            <button type="submit">Create</button>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'create_qrc/css/create_qrc.css' %}">
+{% endblock %}
+
+{% block title %}
+    Create QR-code
+{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="config">
+            <!-- Inputs -->
+            <div class="inputs">
+                <input type="text" name="name" placeholder="NAME *" maxlength="15">
+                <input type="text" name="url" placeholder="URL *" required>
+            </div>
+            {% if type_sub == "base" %}
+                <h2 style="margin-left: 150px;">Недоступні функції для кастомізації</h2>
+            {% endif %}
+            <!-- Color Config -->
+            <div class="color">
+                <h2>Колір QR-Code:</h2>
+                <div>
+                    {% if type_sub != "base" %}
+                        <input type="color" class="color-qr color" name="fill_color"  value="#FFFFFF">
+                    {% else %}
+                        <div class="color-qr"></div>
+                        <input type="color" class="color-qr1 color" name="fill_color"  value="#FFFFFF">
+                    {% endif %}
+                    <p class="text-color qr-color">#ffffff</p>
+                </div>
+                <h2>Колір фону:</h2>
+                <div>
+                    {% if type_sub != "base" %}
+                        <input type="color" class="color-bg color" name="back_color" value="#000000">
+                    {% else %}
+                        <div class="color-bg"></div>
+                        <input type="color" class="color-bg1 color" name="back_color" value="#000000">
+                    {% endif %}
+                    <p class="text-color bg-color">#000000</p>
+                </div>
+            </div>
+            <!-- Icons -->
+            <h2>Виберіть зображення для QR-Code:</h2>
+            <div class="icons">
+                {% if type_sub != 'base' %}
+                    <input type="file" class="icon" name="icon_in_center">
+                {% else %}
+                    <h3>Недоступна функція</h3>
+                {% endif %}
+            </div>
+            <h2>Виберіть тип QR-code:</h2>
+            <div class="types-qrcode">
+                <input type="radio" class="checkbox-none" name="body" value="square"  id="square" checked>
+                <div class="shape shapep">
+                    <label id="label-squared-body" class="label-shape" for="square">
+                        <img class="img-shapes" src="{% static 'create_qrc/images/square-body.png' %}">
+                    </label>
+                </div>
+                
+                <input type="radio" class="checkbox-none" name="body" value="gapped" id="dots">
+                <div class="shape shapep">
+                    <label id="label-miniround" class="label-shape" for="dots">
+                        <img class="img-shapes" src="{% static 'create_qrc/images/gapped-body.png' %}">
+                    </label>
+                </div>
+                
+                <input type="radio" class="checkbox-none" name="body" value="circle" id="circle">
+                <div class="shape shapep">
+                    <label id="label-miniround" class="label-shape" for="circle">
+                        <img class="img-shapes" src="{% static 'create_qrc/images/circle-body.png' %}">
+                    </label>
+                </div>
+                
+                <input type="radio" class="checkbox-none" name="body" value="rounded" id="rounded">
+                <div class="shape shapep">
+                    <label id="label-miniround" class="label-shape" for="rounded">
+                        <img class="img-shapes" src="{% static 'create_qrc/images/rounded-body.png' %}">
+                    </label>
+                </div>
+                
+                <input type="radio" class="checkbox-none" name="body" value="vertical" id="vertical">
+                <div class="shape shapep">
+                    <label id="label-miniround" class="label-shape" for="vertical">
+                        <img class="img-shapes" src="{% static 'create_qrc/images/vertical-body.png' %}">
+                    </label>
+                </div>
+                
+                <input type="radio" class="checkbox-none" name="body" value="horizontal" id="horizontal">
+                <div class="shape shapep">
+                    <label id="label-miniround" class="label-shape" for="horizontal">
+                        <img class="img-shapes" src="{% static 'create_qrc/images/horizontal-body.png' %}">
+                    </label>
+                </div>
+            </div>
+
+
+        </div>
+        <!--  -->
+        <div class="preview-qr">
+            <img src="{% static 'create_qrc/images/qrcode.png' %}" alt="QRCODE" class="qrcode-img">
+            <div class="sizes-div">
+                {% if type_sub == "base" %}
+                    <h3 class="block-size-qrcode">Недоступна функція</h3>
+                {% else %}
+                    <h3 class="block-size-qrcode">Змінити розмір qrcode</h3>
+                {% endif %}
+                <fieldset>
+                    <!--  -->
+                    {% if type_sub == "base" %}
+                        <div>
+                            <input type="radio" id="256px" name="size" value="256px" checked>
+                            <label for="256px">256px</label>
+                        </div>
+                    {% else %}
+                        <div>
+                            <input type="radio" id="256px" name="size" value="256px" required>
+                            <label for="256px">256px</label>
+                        </div>
+                    {% endif %}
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="512px" name="size" value="512px"/>
+                        <label for="512px">512px</label>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="1028px" name="size" value="1028px"/>
+                        <label for="1028px">1028px</label>
+                    </div>
+                    {% if type_sub == "base" %}
+                        <div class="block-size-qrcode-div"></div>
+                    {% endif %}
+                </fieldset>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="generate">Generate</button>
+                <button class="download">Download</button>
+            </div>
+        </div>
+    </form>
+    <script src="{% static 'create_qrc/js/create_qrc.js' %}"></script>
+{% endblock %}

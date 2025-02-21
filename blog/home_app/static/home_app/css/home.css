@@ -1,0 +1,78 @@
+.welcome-text {
+    margin: auto;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 750px;
+    height: 400px;
+    background: #FFFFFF;
+    border: 4px solid #FFFFFF;
+    border-radius: 35px;
+}
+p {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    text-align: center;
+    color: #000000;
+
+}
+.home-page-text {
+    margin: auto;
+    margin-top:300px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 116px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+}
+h2 {
+    font-family: 'Inter';
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.contacts {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+    gap: 10px;
+}
+.links-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+}
+.image-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: #FFFFFF;
+    border-radius: 45px;
+}
