@@ -8,5 +8,6 @@ from subscribes.models import Subscribe
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete= models.CASCADE)
     subscribe = models.ForeignKey(Subscribe, on_delete= models.PROTECT, default=1)
+    qrcodes_created = models.IntegerField(default=0)
     def __str__(self):
         return self.user.username

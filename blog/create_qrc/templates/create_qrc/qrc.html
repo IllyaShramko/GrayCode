@@ -142,7 +142,18 @@
                 <button type="submit" class="generate">Generate</button>
                 <button class="download">Download</button>
             </div>
-        </div>
+            {% if alert %}
+                <div class="alert">
+                    <h3 class="alert-text">У вас закінчився ліміт створення QR-кодів</h3>
+                    <img src="{% static 'create_qrc/images/info.png' %}" class="info-img">
+                    <div class="popup-info">
+                        <p class="popup-text">
+                            Ліміт можна збільшить, якщо змінити підписку на сторінці Subscribes
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+            </div>
     </form>
     <script src="{% static 'create_qrc/js/create_qrc.js' %}"></script>
 {% endblock %}

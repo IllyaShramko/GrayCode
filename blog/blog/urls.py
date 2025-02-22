@@ -21,7 +21,7 @@ from home_app.views import render_home
 from user.views import render_login
 from user.views import render_registration
 from subscribes.views import render_subs
-from my_qrs.views import render_my_qrs
+from my_qrs.views import render_my_qrs, redirect_qrcode
 from . import settings
 from django.conf.urls.static import static
 urlpatterns = [
@@ -30,7 +30,8 @@ urlpatterns = [
     path('', render_home, name = 'home'),
     path('user/', include("user.urls")),
     path('subscribes/', render_subs, name = 'subscribes'),
-    path('my_qrs/', render_my_qrs, name = 'my_qrs')
+    path('view_qrcode/<int:pk>', redirect_qrcode, name= 'view_qrcode'),
+    path('my_qrs/', render_my_qrs, name="my_qrs")
 ]
 
 if settings.DEBUG:

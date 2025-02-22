@@ -240,3 +240,46 @@ h3 {
     border: 3px solid black ;
     border-radius: 5px;
 }
+.alert {
+    position: relative;
+    top: -15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.alert-text {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+.info-img {
+    width: 45px;
+    height: 45px;
+}
+.popup-info {
+    display: flex;
+    position: absolute;
+    left: 330px;
+    /* bottom: ; */
+    width: 250px;
+    height: 95px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: #000000 2px solid;
+    border-radius: 15px;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-text {
+    color: black;
+    font-family: 'Inter';
+    font-size: 20px;
+    text-align: center;
+}
+.info-img:hover + .popup-info{
+    opacity: 1;
+    visibility: visible;
+}
