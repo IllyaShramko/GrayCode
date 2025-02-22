@@ -1,0 +1,126 @@
+form {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px 50px;
+    gap: 34px;
+
+    width: 838px;
+    height: 570px;
+
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    border-radius: 20px;
+}
+form h2 {
+    font-family: 'Inter';
+    font-size: 36px;
+}
+.main-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 65%;
+    gap: 40px;
+    justify-content: start;
+}
+form h3 {
+    font-family: 'Inter';
+    font-size: 25px;
+}
+form input {
+    font-family: 'Inter';
+    font-size: 25px;
+    height: 55px;
+    padding-left: 10px;
+    border: #000000 3px solid;
+    border-radius: 15px;
+    width: 100%;
+}
+.name-surname-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+.name-surname-inputs div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.main-info-card-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    /* justify-content: start; */
+    width: 100%;
+    gap: 10px;
+}
+.expire-date-div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.security-code-div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.name-surname-inputs div input{
+    width: 100%;
+}
+button {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 28px;
+
+    width: 265px;
+    height: 62px;
+
+    background: #82A9F2;
+    border: 3px solid #000000;
+    border-radius: 30px;
+    
+}
+button:hover {
+    background: #628ad4;
+}
+.main-info-card-inputs img {
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 312px;
+    width: 40px;
+    height: 40px;
+
+}
+.popup-info {
+    display: flex;
+    position: absolute;
+    /* left: 330px; */
+    width: 300px;
+    height: 95px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: #000000 2px solid;
+    border-radius: 15px;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-text {
+    color: black;
+    font-family: 'Inter';
+    font-size: 20px;
+    text-align: center;
+}
+.main-info-card-inputs img:hover + .popup-info{
+    opacity: 1;
+    visibility: visible;
+}

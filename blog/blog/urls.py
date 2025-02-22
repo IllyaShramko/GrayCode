@@ -22,6 +22,7 @@ from user.views import render_login
 from user.views import render_registration
 from subscribes.views import render_subs
 from my_qrs.views import render_my_qrs, redirect_qrcode
+from payment.views import render_payment_pro, render_payment_standart
 from . import settings
 from django.conf.urls.static import static
 urlpatterns = [
@@ -31,7 +32,8 @@ urlpatterns = [
     path('user/', include("user.urls")),
     path('subscribes/', render_subs, name = 'subscribes'),
     path('view_qrcode/<int:pk>', redirect_qrcode, name= 'view_qrcode'),
-    path('my_qrs/', render_my_qrs, name="my_qrs")
+    path('my_qrs/', render_my_qrs, name="my_qrs"),
+    path('payment/', include("payment.urls"))
 ]
 
 if settings.DEBUG:

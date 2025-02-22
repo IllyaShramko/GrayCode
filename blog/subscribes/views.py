@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from user.models import Profile
 # Create your views here.
 from django.contrib.auth.decorators import login_required
@@ -13,9 +13,9 @@ def render_subs(request):
         if switch_subscribe == "base":
             profile.subscribe_id = 1
         elif switch_subscribe == "standart":
-            profile.subscribe_id = 2
+            return redirect("payment_standart")
         elif switch_subscribe == "pro":
-            profile.subscribe_id = 3
+            return redirect("payment_pro")
         profile.save()
     
     if profile.subscribe_id == 1:

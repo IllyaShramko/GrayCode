@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Payment | QR-Code Aqua
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/payment.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h2 class="title-switch">Змінення типу підписки на {{ type_switch_sub }}</h2>
+        <div class="main-information">
+            <div class="name-surname-inputs">
+                <div class="name-div">
+                    <h3 class="name-text">Ім'я:</h3>
+                    <input type="text" placeholder="Ім'я" name="name" required>
+                </div>
+                <div class="surname-div">
+                    <h3 class="name-text">Призвіще:</h3>
+                    <input type="text" placeholder="Призвіще" name="surname" required>
+                </div>
+            </div>
+            <div class="number-card-div">
+                <h3 class="number-card-text">Номер картки:</h3>
+                <input type="text" placeholder="0000-0000-0000-0000" name="number-card" required>
+            </div>
+            <div class="main-info-card-inputs">
+                <div class="expire-date-div">
+                    <h3 class="expire-date-text">Термін придатності:</h3>
+                    <input type="text" placeholder="YY/MM" name="expire-date" required>
+                </div>
+                <div class="security-code-div">
+                    <h3 class="security-code-text">Код безпеки:</h3>
+                    <input type="password" placeholder="CVV/CVC" name="security-code" required>
+                    <img src="{% static '/images/info.png' %}">
+                    <div class="popup-info">
+                        <p class="popup-text">
+                            Код безпеки або CVV/CVC – це три або чотири цифри на звороті вашої картки
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Підписатись</button>
+    </form>
+{% endblock %}

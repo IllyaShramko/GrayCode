@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'home_app',
     'user',
     'subscribes',
-    'my_qrs'
+    'my_qrs',
+    'payment'
 ]
 
 MIDDLEWARE = [
