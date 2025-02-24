@@ -15,7 +15,9 @@ def render_subs(request):
         elif switch_subscribe == "standart":
             return redirect("payment_standart")
         elif switch_subscribe == "pro":
-            return redirect("payment_pro")
+            profile.subscribe_id = 3
+        elif switch_subscribe == "universal":
+            profile.subscribe_id = 4
         profile.save()
     
     if profile.subscribe_id == 1:
@@ -24,4 +26,6 @@ def render_subs(request):
         type_sub = "standart"
     elif profile.subscribe_id == 3:
         type_sub = "pro"
+    elif profile.subscribe_id == 4:
+        type_sub = "universal"
     return render(request, "subscribes/subs.html", context={"is_auth": True, "username": request.user, "type_sub": type_sub})
