@@ -91,3 +91,9 @@ li {
 .des2 {
     margin-bottom: 35px;
 }
+.avable-for {
+    opacity: 0.7;
+    color: #FFFFFF;
+    font-family: "Inter";
+    font-size: 16px;
+}

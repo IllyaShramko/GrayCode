@@ -14,6 +14,7 @@
     <div class="subscribes">
         <div class="subscribe s1">
             <h3 class="title-of-subscribe">base</h3>
+            <p class = "avable-for">Підходить для новачків</p>
             <p class="description">
                 <ul>
                     <li>Max 1 standard Qr-code per 6 mouths</li>
@@ -34,6 +35,7 @@
 
         <div class="subscribe s2">
             <h3 class="title-of-subscribe">standart</h3>
+            <p class = "avable-for">Підходить для звичайних користувачів</p>
             <p class="description">
                 <ul class="des2">
                     <li>10 custom QR-Codes for month</li>
@@ -54,6 +56,7 @@
 
         <div class="subscribe s3">
             <h3 class="title-of-subscribe">pro</h3>
+            <p class = "avable-for">Підходить для інтернет-бізнесу</p>
             <p class="description">
                 <ul class="des2">
                     <li>100 custom QR-Codes for month</li>
@@ -66,6 +69,27 @@
                 <form method="post">
                     {% csrf_token %}
                     <button value="pro" name="button" class="subscibea">subscibe</button>
+                </form>
+            {% endif %}
+        </div>
+
+        <div class="line-between-divs"></div>
+
+        <div class="subscribe s4">
+            <h3 class="title-of-subscribe">universal</h3>
+            <p class = "avable-for">Підходить для заводів</p>
+            <p class="description">
+                <ul class="des2">
+                    <li>300 custom QR-Codes for month</li>
+                    <li>20$/Month</li>
+                </ul>
+            </p>
+            {% if type_sub == "universal" %}
+                <p class="already-used">already used</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button value="universal" name="button" class="subscibea">subscibe</button>
                 </form>
             {% endif %}
         </div>
