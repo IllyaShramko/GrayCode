@@ -9,7 +9,7 @@ form {
     gap: 34px;
 
     width: 838px;
-    height: 570px;
+    height: 670px;
 
     background: #FFFFFF;
     border: 3px solid #000000;
@@ -23,7 +23,7 @@ form h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 65%;
+    height: 60%;
     gap: 40px;
     justify-content: start;
 }
@@ -123,4 +123,7 @@ button:hover {
 .main-info-card-inputs img:hover + .popup-info{
     opacity: 1;
     visibility: visible;
+}
+.method-payment {
+    font-size: 28px;
 }

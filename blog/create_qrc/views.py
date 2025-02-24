@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import QRcodes
 from user.models import Profile
 from django.core.files.storage import FileSystemStorage
+from django.http import HttpRequest
 import qrcode, os, time
 from PIL import Image
 from qrcode.image.styles.moduledrawers import GappedSquareModuleDrawer, CircleModuleDrawer, SquareModuleDrawer,RoundedModuleDrawer, VerticalBarsDrawer, HorizontalBarsDrawer
@@ -27,7 +28,7 @@ modules_driwer = {
 
 
 @login_required
-def render_create_qrc(request):
+def render_create_qrc(request: HttpRequest):
     print(request.build_absolute_uri())
     list_absolute_url_default = request.build_absolute_uri().split("/")
     print(list_absolute_url_default)

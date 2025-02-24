@@ -13,7 +13,8 @@
 {% block content %}
     <form method="post">
         {% csrf_token %}
-        <h2 class="title-switch">Змінення типу підписки на {{ type_switch_sub }}</h2>
+        <h2 class="title-switch">Оформлення підписки {{ type_switch_sub }}</h2>
+        <h2 class="method-payment">Спосіб оплати: дебетова або кредитна картка</h2>
         <div class="main-information">
             <div class="name-surname-inputs">
                 <div class="name-div">
@@ -27,7 +28,7 @@
             </div>
             <div class="number-card-div">
                 <h3 class="number-card-text">Номер картки:</h3>
-                <input type="text" placeholder="0000-0000-0000-0000" name="number-card" required>
+                <input type="text" placeholder="0000 0000 0000 0000" data-encrypted-name="number autocomplete="cc-number" name="number-card" required>
             </div>
             <div class="main-info-card-inputs">
                 <div class="expire-date-div">
@@ -46,6 +47,6 @@
                 </div>
             </div>
         </div>
-        <button type="submit">Підписатись</button>
+        <button type="submit">Оплатити</button>
     </form>
 {% endblock %}
