@@ -3,7 +3,7 @@ from django.urls import reverse
 # from user.models import Profile
 # Create your models here.
 class Subscribe(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     description = models.TextField()
     cost_per_month = models.CharField(max_length=255)
 

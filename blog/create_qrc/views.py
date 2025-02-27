@@ -56,6 +56,9 @@ def render_create_qrc(request: HttpRequest):
     elif current_profile.subscribe.name == "pro":
         if current_profile.qrcodes_created < 50:
             generate_qrcode= True
+    elif current_profile.subscribe.name == "universal":
+        if current_profile.qrcodes_created < 125:
+            generate_qrcode= True
     if request.method == "POST":
         if generate_qrcode:
             name = request.POST.get('name')
@@ -103,8 +106,10 @@ def render_create_qrc(request: HttpRequest):
                 border=2,
                 box_size=def_size_qrcode
             )
-            
-            qr.add_data(absolute_url + QRcode.get_absolute_url())
+            if "https://" in url:
+                qr.add_data(absolute_url + QRcode.get_absolute_url())
+            else:
+                qr.add_data(url)
             qr.make(fit=True)
 
             if icon_in_center:
@@ -140,12 +145,6 @@ def render_create_qrc(request: HttpRequest):
     profiles = Profile.objects.filter(user_id= request.user.id)
     profile = profiles[0]
 
-    if profile.subscribe_id == 1:
-        type_sub = "base"
-    elif profile.subscribe_id == 2:
-        type_sub = "standart"
-    elif profile.subscribe_id == 3:
-        type_sub = "pro"
-    return render(request, "create_qrc/qrc.html", context= {"is_auth": True, 'username': request.user.username, 'type_sub': type_sub, "alert": alert})
+    return render(request, "create_qrc/qrc.html", context= {"is_auth": True, 'username': request.user.username, 'type_sub': profile.subscribe.name, "alert": alert})
 
 # def redirect_user_to_qrcode_url():

@@ -16,8 +16,20 @@
         <div class="config">
             <!-- Inputs -->
             <div class="inputs">
-                <input type="text" name="name" placeholder="NAME *" maxlength="15">
-                <input type="text" name="url" placeholder="URL *" required>
+                <input type="text" name="name" placeholder="NAME *" maxlength="15" required>
+                {% if type_sub == "universal" %}
+                    <input type="text" name="url" placeholder="URL or INFORMATION *" required>
+                    <div class="info-url">
+                        <img src="{% static 'create_qrc/images/info.png' %}" class="info-img-url">
+                        <div class="popup-info-url">
+                            <p class="popup-text-url">
+                                Якщо указуєте URL-посилання обов'язково указуйте з https://
+                            </p>
+                        </div>
+                    </div>
+                {% else %}
+                    <input type="text" name="url" placeholder="URL *" required>
+                {% endif %}
             </div>
             {% if type_sub == "base" %}
                 <h2 style="margin-left: 150px;">Недоступні функції для кастомізації</h2>

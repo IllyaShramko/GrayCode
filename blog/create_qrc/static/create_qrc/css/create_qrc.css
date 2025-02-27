@@ -13,7 +13,7 @@ form {
     gap: 10px;
 
     width: 1145px;
-    height: 604px;
+    height: 624px;
 
     background: #FFFFFF;
     border: 3px solid #000000;
@@ -279,6 +279,43 @@ h3 {
     text-align: center;
 }
 .info-img:hover + .popup-info{
+    opacity: 1;
+    visibility: visible;
+}
+.info-url {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 76px;
+    margin-left: 615px;
+}
+.info-img-url {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+}
+.popup-info-url {
+    display: flex;
+    position: absolute;
+    left: 55px;
+    width: 250px;
+    height: 95px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: #000000 2px solid;
+    border-radius: 15px;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-text-url {
+    color: black;
+    font-family: 'Inter';
+    font-size: 20px;
+    text-align: center;
+}
+.info-img-url:hover + .popup-info-url{
     opacity: 1;
     visibility: visible;
 }

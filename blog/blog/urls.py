@@ -22,7 +22,7 @@ from user.views import render_login
 from user.views import render_registration
 from subscribes.views import render_subs
 from my_qrs.views import render_my_qrs, redirect_qrcode
-from payment.views import render_payment_pro, render_payment_standart, render_payment
+from payment.views import  render_payment
 from . import settings
 from django.conf.urls.static import static
 urlpatterns = [
