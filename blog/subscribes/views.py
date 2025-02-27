@@ -22,12 +22,4 @@ def render_subs(request):
             return redirect(subscribes[3].get_absolute_url())
         profile.save()
     
-    if profile.subscribe_id == 1:
-        type_sub = "base"
-    elif profile.subscribe_id == 2:
-        type_sub = "standart"
-    elif profile.subscribe_id == 3:
-        type_sub = "pro"
-    elif profile.subscribe_id == 4:
-        type_sub = "universal"
-    return render(request, "subscribes/subs.html", context={"is_auth": True, "username": request.user, "type_sub": type_sub})
+    return render(request, "subscribes/subs.html", context={"is_auth": True, "username": request.user, "type_sub": profile.subscribe.name})
