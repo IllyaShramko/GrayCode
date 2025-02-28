@@ -54,6 +54,9 @@ h2 {
     font-size: 20px;
 
 }
+.download:hover {
+    cursor: pointer;
+}
 .qrcode {
     display: flex;
     width: 310px;
@@ -64,6 +67,25 @@ h2 {
     font-family: "Inter";
     font-size: 20px;
 }
+.qrcode div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.qrcode div img{
+    width: 50px;
+    height: 50px;
+}
+.delete {
+    border: none;
+    background-color: #5B8CE7;
+}
+.delete:hover {
+    cursor: pointer;
+}
+
 .header {
     margin: auto;
     display: flex;
@@ -106,6 +128,10 @@ h2 {
     background-color: #FFFFFF;
     border-radius: 0px 15px 15px 0px;
 }
+
+.search_button:hover {
+    cursor: pointer;
+}
 .search_img {
     width: 40px;
     height: 40px;
@@ -126,4 +152,72 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.bg-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.45;
+}
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 650px;
+    height: 340px;
+    background-color: #FFFFFF;
+    border: black 2px solid;
+    border-radius: 25px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    gap: 100px;
+
+}
+#d1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+#d2 {
+    display: flex;
+    gap: 20px;
+}
+.popup p {
+    font-family: 'Inter';
+    font-size: 17px;
+    text-align: center;
+}
+.popup h2 {
+    color: black;
+    font-size: 30px;
+}
+
+.safe-popup {
+    width: 125px;
+    height: 45px;
+    font-family: 'Inter';
+    font-size: 16px;
+    background-color: #16fbfc;
+}
+.delete-popup {
+    width: 125px;
+    height: 45px;
+    font-family: 'Inter';
+    font-size: 16px;
+    background-color: #ff4a4a;
+}
+.delete-popup:hover {
+    background-color: #db4040;
+    cursor: pointer;
+}
+.safe-popup:hover {
+    background-color: #13d2d2;
+    cursor: pointer;
 }

@@ -40,6 +40,8 @@ def render_create_qrc(request: HttpRequest):
     
     print(time.localtime())
     try:
+        os.mkdir(os.path.abspath(__file__ + f"/../../media/"))
+        os.mkdir(os.path.abspath(__file__ + f"/../../media/images/"))
         os.mkdir(os.path.abspath(__file__ + f"/../../media/images/qrcodes"))
     except:
         print("Error Make Base Qrcodes Mkdir | 29")
