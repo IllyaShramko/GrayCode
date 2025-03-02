@@ -31,6 +31,10 @@ def render_home(request):
         print('123')
     except Exception as e:
         print(e)
-    profiles = Profile.objects.filter(user_id= request.user.id)
-    profile = profiles[0]
-    return render(request, "home_app/home_app.html", context={"is_auth": request.user.is_authenticated, 'username': request.user, "type_sub": profile.subscribe.name})
+    if request.user.is_authenticated:
+        profiles = Profile.objects.filter(user_id= request.user.id)
+        profile = profiles[0]
+        type_sub =profile.subscribe.name
+    else:
+        type_sub= None
+    return render(request, "home_app/home_app.html", context={"is_auth": request.user.is_authenticated, 'username': request.user, "type_sub": type_sub})
