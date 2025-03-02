@@ -20,7 +20,102 @@
             <p>потрібно aавторизуватись</p>
         </div>
     {% else %}
-        <h1 class="home-page-text">Головна сторінка</h1>
+        <h1 class="home-page-text">Генератор QR-Кодів</h1>
+        <h2 class="home-page-description">Створіть свій перший безкоштовний та кастомізований QRкод на сторінці <a href="{% url 'generate' %}">генерації</a>!</h2>
+        
+        <div class="subscribes">
+            <div class="subscribe s1">
+                <div class="information">
+                    <h3 class="title-of-subscribe">base</h3>
+                    <p class = "avable-for">Підходить для новачків</p>
+                    <p class="description">
+                        <ul>
+                            <li>Для веб-додатків</li>
+                            <li>1 Кастомний Qr-code</li>
+                            <li>Підтримка QRкода 6 місяців</li>
+                            <li>Безкоштовно!</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="buy">
+                    {% if type_sub == "base" %}
+                        <p class="already-used">Поточний план</p>
+                    {% else %}
+                        <a href="{% url 'subscribes' %}" class="subscibea">Оформити</a>
+                    {% endif %}
+                </div>
+            </div>
+    
+            <div class="line-between-divs"></div>
+    
+            <div class="subscribe s2">
+                <div class="information">
+                    <h3 class="title-of-subscribe">standart</h3>
+                    <p class = "avable-for">Підходить для звичайних користувачів</p>
+                    <p class="description">
+                        <ul class="des2">
+                            <li>Для веб-додатків</li>
+                            <li>До 10 кастомізованих QRкодів</li>
+                            <li>2$/Місяць</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    {% if type_sub == "standart" %}
+                        <p class="already-used">Поточний план</p>
+                    {% else %}
+                        <a href="{% url 'subscribes' %}" class="subscibea">Оформити</a>
+                    {% endif %}
+                </div>
+            </div>
+    
+            <div class="line-between-divs"></div>
+    
+            <div class="subscribe s3">
+                <div class="information">
+                    <h3 class="title-of-subscribe">pro</h3>
+                    <p class = "avable-for">Підходить для інтернет-бізнесу</p>
+                    <p class="description">
+                        <ul class="des2">
+                            <li>Для веб-додатків</li>
+                            <li>До 100 кастомізованих QRкодів</li>
+                            <li>10$/Місяць</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    {% if type_sub == "pro" %}
+                        <p class="already-used">Поточний план</p>
+                    {% else %}
+                        <a href="{% url 'subscribes' %}" class="subscibea">Оформити</a>
+                    {% endif %}
+                </div>
+            </div>
+    
+            <div class="line-between-divs"></div>
+    
+            <div class="subscribe s4">
+                <div class="information">
+                    <h3 class="title-of-subscribe">universal</h3>
+                    <p class = "avable-for">Зручно та підходить для підприємств</p>
+                    <p class="description">
+                        <ul class="des2">
+                            <li>Підходить для створення QRкода не на веб-додаток, а файл/данних</li>
+                            <li>До 200 кастомізованих QRкодів</li>
+                            <li>20$/Місяць</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    {% if type_sub == "universal" %}
+                        <p class="already-used">Поточний план</p>
+                    {% else %}
+                        <a href="{% url 'subscribes' %}" class="subscibea">Оформити</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
         <div class="contacts">
             <h2>Служба Підтримки</h2>
             <div class="links-contacts">

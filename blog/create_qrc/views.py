@@ -73,6 +73,7 @@ def render_create_qrc(request: HttpRequest):
             # 
             fill_color = hex_to_rgb(fill_color_hex)
             back_color = hex_to_rgb(back_color_hex)
+            print(fill_color, back_color)
             # 
             print(fill_color, back_color)
             if size_qrcode == "256px":
@@ -98,7 +99,8 @@ def render_create_qrc(request: HttpRequest):
                 qrcode_img = f"images/qrcodes/{request.user.username}/{name}.png",
                 user= Profile.objects.get(user=request.user),
                 url = url,
-                date_delete = date_delete
+                date_delete = date_delete,
+                subscribe_created= Profile.objects.get(user=request.user).subscribe
             )
             QRcode.save()
 

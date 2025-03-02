@@ -27,11 +27,11 @@
             </div>
             <div class="buy">
                 {% if type_sub == "base" %}
-                    <p class="already-used">already used</p>
+                    <p class="already-used">Поточний план</p>
                 {% else %}
                     <form method="post">
                         {% csrf_token %}
-                        <button value="base" name="button" class="subscibea">subscibe</button>
+                        <button value="base" name="button" class="subscibea">Оформити</button>
                     </form>
                 {% endif %}
             </div>
@@ -42,7 +42,7 @@
         <div class="subscribe s2">
             <div class="information">
                 <h3 class="title-of-subscribe">standart</h3>
-                <p class = "avable-for">Підходить для звичайних користувачів</p>
+                <p class = "avable-for">Вибір досвідченого користувача</p>
                 <p class="description">
                     <ul class="des2">
                         <li>Для веб-додатків</li>
@@ -53,11 +53,11 @@
             </div>
             <div>
                 {% if type_sub == "standart" %}
-                    <p class="already-used">already used</p>
+                    <p class="already-used">Поточний план</p>
                 {% else %}
                     <form method="post">
                         {% csrf_token %}
-                        <button value="standart" name="button" class="subscibea">subscibe</button>
+                        <button value="standart" name="button" class="subscibea">Оформити</button>
                     </form>
                 {% endif %}
             </div>
@@ -79,11 +79,11 @@
             </div>
             <div>
                 {% if type_sub == "pro" %}
-                    <p class="already-used">already used</p>
+                    <p class="already-used">Поточний план</p>
                 {% else %}
                     <form method="post">
                         {% csrf_token %}
-                        <button value="pro" name="button" class="subscibea">subscibe</button>
+                        <button value="pro" name="button" class="subscibea">Оформити</button>
                     </form>
                 {% endif %}
             </div>
@@ -105,11 +105,11 @@
             </div>
             <div>
                 {% if type_sub == "universal" %}
-                    <p class="already-used">already used</p>
+                    <p class="already-used">Поточний план</p>
                 {% else %}
                     <form method="post">
                         {% csrf_token %}
-                        <button value="universal" name="button" class="subscibea">subscibe</button>
+                        <button value="universal" name="button" class="subscibea">Оформити</button>
                     </form>
                 {% endif %}
             </div>

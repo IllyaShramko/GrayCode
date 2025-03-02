@@ -20,12 +20,12 @@ body{
 }
 .title{
     color: #FFFFFF;
-    font-size: 50px;
+    font-size: 40px;
     font-family: "Inter";
 }
 img {
-    width: 100px;
-    height: 75px;
+    width: 90px;
+    height: 70px;
 }
 .links {
     position: absolute;
@@ -39,9 +39,8 @@ img {
 }
 a {
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Inter";
-    text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
@@ -61,7 +60,7 @@ a {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 48px;
     /* text-transform: uppercase; */
 

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Помилка переадресації | QRcode Aqua
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'my_qrs/css/error_qrcode.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    {% if error_qrcode == "time" %}
+    <h1>На цьому QRкоду закінчився термін роботи (6 місяців), щоб продовжити термін роботи, можна <a class="change" href="{% url 'subscribes' %}">змінити тариф</a></h1>
+    {% elif error_qrcode == "sub" %}
+    <h1>Цей QRкод був створенний на підписці {{ sub.created }}, а поточний тариф користувача {{ sub.current }}. Вам треба змінити або ваш тариф на попередній, або на краще. <a class="change" href="{% url 'subscribes' %}">Змінити тариф</a></h1>
+    {% endif %}
+
+{% endblock %}
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="{% static 'my_qrs/css/error_qrcode.css' %}">
+    </head>
+    <body>
+    </body>
+</html>

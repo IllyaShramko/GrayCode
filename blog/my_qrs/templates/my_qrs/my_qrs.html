@@ -36,7 +36,7 @@
                     <p class="date-creation">Date: {{ qrcode.date }}</p>
                     <p class="title-qr-code">{{ qrcode.name }}</p>
                     <div>
-                        <button class="download">Download</button>
+                        <a href="{{ qrcode.qrcode_img.url }}" class="download" download="">Download</a>
                         <form method="post">
                             {% csrf_token %}
                             <button class="delete" name="button" value="delete-{{ qrcode.name }}-{{ qrcode.id }}">

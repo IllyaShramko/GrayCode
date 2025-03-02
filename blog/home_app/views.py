@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from subscribes.models import Subscribe
+from user.models import Profile
 
 # Create your views here.
 def render_home(request):
@@ -30,5 +31,6 @@ def render_home(request):
         print('123')
     except Exception as e:
         print(e)
-    # username = None
-    return render(request, "home_app/home_app.html", context={"is_auth": request.user.is_authenticated, 'username': request.user})
+    profiles = Profile.objects.filter(user_id= request.user.id)
+    profile = profiles[0]
+    return render(request, "home_app/home_app.html", context={"is_auth": request.user.is_authenticated, 'username': request.user, "type_sub": profile.subscribe.name})
