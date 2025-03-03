@@ -70,3 +70,13 @@ pip install -r requirements.txt
 #### static folder needed for keeping .css files / static тека потрібена зберігання .css файлів
 
 ### static folder needed for keeping base .css files and imgs who to be used in all .css & .html files / static тека потрібна для зберігання базових .css файлів та зображень, які будуть використовуватися у всіх .css та .html файлів 
+
+### payment folder / payment тека:
+#### static folder needed for keeping .css & .js files & imgs / static тека потрібна для зберігання .css та .js файлів та зображень
+#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
+#### views.py needed for create render page function / views.py потрібен створювання фукнції відображення сторінки
+
+### my_qrs folder / my_qrs тека:
+#### static folder needed for keeping .css files & imgs / static тека потрібна для зберігання .css файлів та зображень
+#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
+#### views.py needed for create render page function & redirect on site from our / views.py потрібен створювання фукнції відображення сторінки та перенаправлення на сайт QR-кода з нашого
