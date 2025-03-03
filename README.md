@@ -29,10 +29,23 @@ ____
 ```
 git clone https://github.com/IllyaShramko/QRcode-Aqua.git
 ```
-### Second, libraries which you need for run the project / Друге, модулі, які вам знадобляться для роботи проекту:
-#### 1. django, it's main module for work all project, without he project won't be started! /
-#### 2. os need for manupilate files, save qrcodes etc. /
-#### 3. qrcode, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes /
-#### 4. os need for manupilate files, save qrcodes etc. /
-#### 5. os need for manupilate files, save qrcodes etc. /
-#### 6. os need for manupilate files, save qrcodes etc. /
+### Second, you need to create venv and install all requirements who typed bottom for correctly work project / По-друг, вам потрібно створити venv і встановити всі біблеотеки з файлу requirements, які перечислені внизу для коректної роботи проекту:
+#### You can create venv for 1 command / Ви можете створити віртуальне оточення з допомоги 1 команди:
+On Windows console:
+```
+python -m venv venv
+```
+On MacOS terminal:
+```
+python3 -m venv venv
+```
+### Third, libraries which you need to install for run the project / По-третє, модулі, які вам знадобиться установити для роботи проекту:
+#### 1. django, it's main module for work all project, without he project won't be started! / django це головний модуль для роботи всього проекту, без нього проект не запуститься!
+#### 2. os need for manupilate files, save qrcodes etc. / OS потрібен для маніпулювання файлами та збереження qr-кодів, тощо.
+#### 3. qrcode, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes / qrcode, це основний модуль для створення qr-кодів, без нього можна запустити проект, але не буде генерувати qr-коди
+#### 4. pillow, it's needed for work module qrcode / pillow, потрібен для роботи модуля qrcode
+#### 5. time, it's needed for control and limit the action on QR-codes / time, потрібен для контролю та обмеження дій над QR-кодами
+### You can install all of this module for 1 command / Ви можете встановити усі ці модулі з допомоги 1 команди:
+```
+pip install -r requirements.txt
+```
