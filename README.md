@@ -30,9 +30,9 @@ ____
 git clone https://github.com/IllyaShramko/QRcode-Aqua.git
 ```
 ### Second, libraries which you need for run the project / Друге, модулі, які вам знадобляться для роботи проекту:
-1. django, it's main module for work all project, without he project won't be started! /
-2. os need for manupilate files, save qrcodes etc. /
-3. qrcode, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes /
-4. os need for manupilate files, save qrcodes etc. /
-5. os need for manupilate files, save qrcodes etc. /
-6. os need for manupilate files, save qrcodes etc. /
+#### 1. django, it's main module for work all project, without he project won't be started! /
+#### 2. os need for manupilate files, save qrcodes etc. /
+#### 3. qrcode, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes /
+#### 4. os need for manupilate files, save qrcodes etc. /
+#### 5. os need for manupilate files, save qrcodes etc. /
+#### 6. os need for manupilate files, save qrcodes etc. /
