@@ -18,10 +18,10 @@ ____
 - The project has many functions such as / У проекта є багато функцій такі як:
     - Registration / Реєстрація
     - Authorizations / Авторизація
-    - Generating QRcodes / Генерація QRcode
+    - Generating QRcodes / Генерація QRcode-ів
     - Changing type of subscribes / Змінювати типи підписок
     - Choosing self customization / Вибір самостійного налаштування
-    - Deleting QR-codes by user / Видаляти QRcode-и користувачем
+    - Deleting QR-codes by user / Видаляти QR-коду користувачем
     - Redirect user from our site to his website what he indicated when he generate QR-code / Перенаправлення користувача з нашого сайту на його веб-сайт який він вказав коли генерував QR-код
 
 # How correctly run the project on your own PC / Як правильно запустити проект на вашому власному комп'ютері:
