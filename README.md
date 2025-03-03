@@ -107,5 +107,5 @@ This project was not easy, but it taught us how to do it:
 3. Працювати з `media` файлами
 4. Використовувати БД у своїх цілях
 
-Many thanks to Egor Galkin, David Petrenko and Timur Koshel for their great work
-Велика подяка Галкіну Єгору, Петренко Давиду і Кошелю Тимурові за гарну роботу
+### Many thanks to Egor Galkin, David Petrenko and Timur Koshel for their work. But I especially want to say a big thank you to Egor for his great contribution to the project.
+### Велика подяка Галкіну Єгору, Петренко Давиду і Кошелю Тимурові за роботу. Але особливо хочеться сказати велике спасибі Єгору за великий внесок у проект.
