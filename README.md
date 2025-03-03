@@ -51,32 +51,61 @@ pip install -r requirements.txt
 ```
 # Files and for what they needed, they main functions / Файли та навіщо вони потрібні, їх основні функції:
 ### Main folder / Основна тека:
-#### manage.py needed for start project in console or terminal / manage.py потрібен для запуску проекту у консолі, або терміналі
-#### db.sqlite3 needed for work project / db.sqlite3 потрібен для роботи проекту
+#### `manage.py` needed for start project in console or terminal / `manage.py` потрібен для запуску проекту у консолі, або терміналі
+#### `db.sqlite3` needed for work project / `db.sqlite3` потрібен для роботи проекту
+____
+### `user` folder / `user` тека:
+#### `views.py` needed for create render page function / `views.py` потрібен створювання фукнції відображення сторінки
+#### `urls.py` needed for create sub-links for log in and sign up / `urls.py` потрібен для під-посиланнь для авторизації та реєстрації
+#### `models.py` needed for create model Profile who needed for main function / `models.py` потрібен створювання моделі Profile, яка потрібна для основних функцій проєкту
+#### `templates` folder needed for keeping .html files / `templates` тека потрібена зберігання .html файлів
+#### `static` folder needed for keeping .css files / `static` тека потрібена зберігання .css файлів
+____
+### `templates` folder needed for keeping base template for all .html files / `templates` тека потрібна для зберігання базового шаблону для всіх .html файлів
+____
+### `subscribes` folder / `subscribes` тека:
+#### `views.py` needed for create render page function / `views.py` потрібен створювання фукнції відображення сторінки
+#### `models.py` needed for create model Subscribe who needed for main function / `models.py` потрібен створювання моделі Subscribe, яка потрібна для основних функцій проєкту
+#### `templates` folder needed for keeping .html files / `templates` тека потрібена зберігання .html файлів
+#### `static` folder needed for keeping .css files / `static` тека потрібена зберігання .css файлів
+____
+### `static` folder needed for keeping base .css files and imgs who to be used in all .css & .html files / `static` тека потрібна для зберігання базових .css файлів та зображень, які будуть використовуватися у всіх .css та .html файлів 
+____
+### `payment` folder / `payment` тека:
+#### `static` folder needed for keeping .css & .js files & imgs / `static` тека потрібна для зберігання .css та .js файлів та зображень
+#### `templates` folder needed for keeping .html files / `templates` тека потрібена зберігання .html файлів
+#### `views.py` needed for create render page function / `views.py` потрібен створювання фукнції відображення сторінки
+____
+### `my_qrs` folder / my_qrs тека:
+#### `static` folder needed for keeping .css files & imgs / `static` тека потрібна для зберігання .css файлів та зображень
+#### `templates` folder needed for keeping .html files / `templates` тека потрібена зберігання .html файлів
+#### `views.py` needed for create render page function & redirect on site from our / `views.py` потрібен створювання фукнції відображення сторінки та перенаправлення на сайт QR-кода з нашого
+____
+### `media` folder needed for keeping all QR-codes created by users / `media` тека потрібна для зберігання QR-кодів створених користувачами
+____
+### `home_app` folder / `home_app` тека:
+#### `static` folder needed for keeping .css files & imgs / `static` тека потрібна для зберігання .css файлів та зображень
+#### `templates` folder needed for keeping .html files / `templates` тека потрібена зберігання .html файлів
+#### `views.py` needed for create render page function / `views.py` потрібен створювання фукнції відображення сторінки
+____
+### `create_qrc` folder / `create_qrc` тека:
+#### `static` folder needed for keeping .css & .js files & imgs / `static` тека потрібна для зберігання .css та .js файлів та зображень
+#### `templates` folder needed for keeping .html files / `templates` тека потрібена зберігання .html файлів
+#### `views.py` needed for create render page function / `views.py` потрібен створювання фукнції відображення сторінки
+#### `models.py` needed for create model QRcodes who needed for main function / `models.py` потрібен створювання моделі QRcodes, яка потрібна для основних функцій проєкту
+# Conclusion / Висновок:
 
-### user folder / user тека:
-#### views.py needed for create render page function / views.py потрібен створювання фукнції відображення сторінки
-#### urls.py needed for create sub-links for log in and sign up / urls.py потрібен для під-посиланнь для авторизації та реєстрації
-#### models.py needed for create model Profile who needed for main function / models.py потрібен створювання моделі Profile, яка потрібна для основних функцій проєкту
-#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
-#### static folder needed for keeping .css files / static тека потрібена зберігання .css файлів
+This project was not easy, but it taught us how to do it:
+1. Create web-applications on Django Framework
+2. Work with django, qrcode
+3. Work with `media` files
+4. Use DB in self purposes
 
-### tempalates folder needed for keeping base template for all .html files / templates тека потрібна для зберігання базового шаблону для всіх .html файлів
+Цей проект був не простим, але завдяки йому ми навчились робити:
+1. Робити веб-додатки на Django
+2. Працювати з django, qrcode
+3. Працювати з `media` файлами
+4. Використовувати БД у своїх цілях
 
-### subscribes folder / subscribes тека:
-#### views.py needed for create render page function / views.py потрібен створювання фукнції відображення сторінки
-#### models.py needed for create model Subscribe who needed for main function / models.py потрібен створювання моделі Subscribe, яка потрібна для основних функцій проєкту
-#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
-#### static folder needed for keeping .css files / static тека потрібена зберігання .css файлів
-
-### static folder needed for keeping base .css files and imgs who to be used in all .css & .html files / static тека потрібна для зберігання базових .css файлів та зображень, які будуть використовуватися у всіх .css та .html файлів 
-
-### payment folder / payment тека:
-#### static folder needed for keeping .css & .js files & imgs / static тека потрібна для зберігання .css та .js файлів та зображень
-#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
-#### views.py needed for create render page function / views.py потрібен створювання фукнції відображення сторінки
-
-### my_qrs folder / my_qrs тека:
-#### static folder needed for keeping .css files & imgs / static тека потрібна для зберігання .css файлів та зображень
-#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
-#### views.py needed for create render page function & redirect on site from our / views.py потрібен створювання фукнції відображення сторінки та перенаправлення на сайт QR-кода з нашого
+Many thanks to Egor Galkin, David Petrenko and Timur Koshel for their great work
+Велика подяка Галкіну Єгору, Петренко Давиду і Кошелю Тимурові за гарну роботу
