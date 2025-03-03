@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from user.models import Profile
 from subscribes.models import Subscribe
+# from .models import PaymentSubscriber
 # Create your views here.
 from django.contrib.auth.decorators import login_required
 
@@ -16,6 +17,7 @@ def render_payment(request, pk):
         number_card = request.POST.get("number-card")
         expire_date = request.POST.get("expire-date")
         security_code = request.POST.get("security-code")
+
         print(name, surname, number_card, expire_date, security_code)
         profile.subscribe_id = pk
         profile.save()

@@ -14,6 +14,10 @@ def render_my_qrs(request: HttpRequest):
     if request.method == "POST":
         
         if 'deleteqr' in request.POST.get('button'):
+            profiles = Profile.objects.filter(user_id= request.user.id)
+            profile = profiles[0]
+            profile.qrcodes_created -= 1
+            profile.save()
             name_delete = QRcodes.objects.get(id= request.POST.get("button").split('-')[-1]).name
             os.remove(os.path.abspath(__file__ + "/../../media/images/qrcodes/" + request.user.username + "/" + name_delete + '.png'))
             QRcodes.objects.get(id=request.POST.get("button").split('-')[-1]).delete()

@@ -28,12 +28,12 @@
             </div>
             <div class="number-card-div">
                 <h3 class="number-card-text">Номер картки:</h3>
-                <input type="text" placeholder="0000 0000 0000 0000" data-encrypted-name="number autocomplete="cc-number" name="number-card" required>
+                <input type="text" placeholder="0000 0000 0000 0000" name="number-card"  class="number-card" maxlength="19" required>
             </div>
             <div class="main-info-card-inputs">
                 <div class="expire-date-div">
                     <h3 class="expire-date-text">Термін придатності:</h3>
-                    <input type="text" placeholder="YY/MM" name="expire-date" required>
+                    <input type="text" placeholder="MM/YY" name="expire-date" class="expire-date" maxlength="5" required>
                 </div>
                 <div class="security-code-div">
                     <h3 class="security-code-text">Код безпеки:</h3>
@@ -49,4 +49,5 @@
         </div>
         <button type="submit">Оплатити</button>
     </form>
+    <script src="{% static '/js/payment.js' %}"></script>
 {% endblock %}

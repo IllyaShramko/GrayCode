@@ -24,8 +24,8 @@ body{
     font-family: "Inter";
 }
 img {
-    width: 90px;
-    height: 70px;
+    width: 100px;
+    height: 75px;
 }
 .links {
     position: absolute;
@@ -34,7 +34,6 @@ img {
     display: flex;
     align-items: center;
     height: 120px;
-    /* width: 50%; */
     gap: 30px;
 }
 a {

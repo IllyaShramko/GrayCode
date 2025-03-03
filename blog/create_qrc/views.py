@@ -123,17 +123,17 @@ def render_create_qrc(request: HttpRequest):
                 qr_view = qr.make_image(
                     image_factory=StyledPilImage,
                     module_drawer= modules_driwer[module_driwer_type],
-                    embeded_image_path= os.path.abspath(__file__ + f"/../../media/{image_path}")
+                    embeded_image_path= os.path.abspath(__file__ + f"/../../media/{image_path}"),
+                    color_mask= SolidFillColorMask(front_color=fill_color, back_color=back_color)
                 )
             else:
                 print("1")
                 qr_view = qr.make_image(
                     image_factory=StyledPilImage,
-                    module_drawer= modules_driwer[module_driwer_type]
+                    module_drawer= modules_driwer[module_driwer_type],
+                    color_mask= SolidFillColorMask(front_color=fill_color, back_color=back_color)
                 )
-            print("2")
-            SolidFillColorMask(front_color=back_color, back_color=fill_color).apply_mask(qr_view)
-
+            
             print(qr_view)
             print(back_color)
             qr_view.save(os.path.abspath(__file__ + "/../static/create_qrc/images/qrcode.png"))
