@@ -49,3 +49,24 @@ python3 -m venv venv
 ```
 pip install -r requirements.txt
 ```
+# Files and for what they needed, they main functions / Файли та навіщо вони потрібні, їх основні функції:
+### Main folder / Основна тека:
+#### manage.py needed for start project in console or terminal / manage.py потрібен для запуску проекту у консолі, або терміналі
+#### db.sqlite3 needed for work project / db.sqlite3 потрібен для роботи проекту
+
+### user folder / user тека:
+#### views.py needed for create render page function / views.py потрібен створювання фукнції відображення сторінки
+#### urls.py needed for create sub-links for log in and sign up / urls.py потрібен для під-посиланнь для авторизації та реєстрації
+#### models.py needed for create model Profile who needed for main function / models.py потрібен створювання моделі Profile, яка потрібна для основних функцій проєкту
+#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
+#### static folder needed for keeping .css files / static тека потрібена зберігання .css файлів
+
+### tempalates folder needed for keeping base template for all .html files / templates тека потрібна для зберігання базового шаблону для всіх .html файлів
+
+### subscribes folder / subscribes тека:
+#### views.py needed for create render page function / views.py потрібен створювання фукнції відображення сторінки
+#### models.py needed for create model Subscribe who needed for main function / models.py потрібен створювання моделі Subscribe, яка потрібна для основних функцій проєкту
+#### templates folder needed for keeping .html files / templates тека потрібена зберігання .html файлів
+#### static folder needed for keeping .css files / static тека потрібена зберігання .css файлів
+
+### static folder needed for keeping base .css files and imgs who to be used in all .css & .html files / static тека потрібна для зберігання базових .css файлів та зображень, які будуть використовуватися у всіх .css та .html файлів 
