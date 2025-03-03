@@ -7,10 +7,10 @@
 ____
 ## Main Information of project / Основна Інформація про проект:
 ### QRCode Auqa project can do / QRCode Auqa project може робити:
-- Start up / Стартап
-- Generate and save customizated QR-codes / Генеує а також зберігає кастомізовані QR-коди 
+- Start up / Запускатися
+- Generate and save customizated QR-codes / Генерує а також зберігає кастомізовані QR-коди 
 - Can changing type of subcribes with payment methods / Може змінюваати типи підписок с оплачуваними методами
-- Saves every qr-code who was created by user / Зберігає кожжний QR-код котрий був створений користувачем
+- Saves every qr-code who was created by user / Зберігає кожжний QR-код який був створений користувачем
 - Control and limit the action of the QR-code / Контролює й обмежує дії с QR-кодом
 ____
 
@@ -25,9 +25,14 @@ ____
     - Redirect user from our site to his website what he indicated when he generate QR-code / Перенаправлення користувача з нашого сайту на його веб-сайт який він вказав коли генерував QR-код
 
 # How correctly run the project on your own PC / Як правильно запустити проект на вашому власному комп'ютері:
-### For first, you need to clone this repository with command / Для початку тобі потрібно скопіювати проект с коммандою:
+### For first, you need to clone this repository with command / Для початку вам потрібно скопіювати проект с командою:
 ```
 git clone https://github.com/IllyaShramko/QRcode-Aqua.git
 ```
 ### Second, libraries which you need for run the project / Друге, модулі, які вам знадобляться для роботи проекту:
-- os
+1. django, it's main module for work all project, without he project won't be started! /
+2. os need for manupilate files, save qrcodes etc. /
+3. qrcode, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes /
+4. os need for manupilate files, save qrcodes etc. /
+5. os need for manupilate files, save qrcodes etc. /
+6. os need for manupilate files, save qrcodes etc. /
