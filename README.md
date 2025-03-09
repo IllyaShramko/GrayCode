@@ -55,6 +55,14 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
+### Fourth, start project / По-четверте, запустити проєкт:
+#### You need enter 2 commands in console/terminal / Вам потрібно ввести 2 команди у консоль/термінал:
+```
+cd blog
+```
+```
+python manage.py runserver
+```
 # Files and for what they needed, they main functions / Файли та навіщо вони потрібні, їх основні функції:
 ### Main folder / Основна тека:
 #### `manage.py` needed for start project in console or terminal / `manage.py` потрібен для запуску проекту у консолі, або терміналі
@@ -115,3 +123,5 @@ This project was not easy, but it taught us how to do it:
 
 ### Many thanks to Egor Galkin, David Petrenko and Timur Koshel for their work. But I especially want to say a big thank you to Egor for his great contribution to the project.
 ### Велика подяка Галкіну Єгору, Петренко Давиду і Кошелю Тимурові за роботу. Але особливо хочеться сказати велике спасибі Єгору за великий внесок у проект.
+
+This project on [Figma](https://www.figma.com/design/MmrkuvX06fTykUtPIY5vig/Untitled?node-id=0-1&t=sjh89WEajAAA5qFc-1)
