@@ -103,6 +103,7 @@ li {
     text-transform: none;
     line-height: 44px;
     color: #000000;
+    cursor: pointer;
 }
 .subscibea:hover {
     background: #5B8CE7;
@@ -113,6 +114,7 @@ li {
 .avable-for {
     opacity: 0.8;
     color: #FFFFFF;
+    font-weight: 400;
     font-family: "Inter";
     font-size: 16px;
 }

@@ -105,7 +105,8 @@ h2 {
 }
 .filter {
     font-family: 'Inter';
-    font-size: 500;
+    
+    font-weight: 600;
     font-size: 35px;
     padding: 5px;
     padding-top: 0px;
@@ -122,6 +123,7 @@ h2 {
     width: 500px;
     border-radius: 0px;
     border: none;
+    cursor: pointer;
 }
 .search_button {
     width: 45px;

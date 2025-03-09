@@ -35,9 +35,15 @@ On Windows console:
 ```
 python -m venv venv
 ```
+```
+venv\Scripts\activate
+```
 On MacOS terminal:
 ```
 python3 -m venv venv
+```
+```
+source venv/bin/activate
 ```
 ### Third, libraries which you need to install for run the project / По-третє, модулі, які вам знадобиться установити для роботи проекту:
 #### 1. django, it's main module for work all project, without he project won't be started! / django це головний модуль для роботи всього проекту, без нього проект не запуститься!
