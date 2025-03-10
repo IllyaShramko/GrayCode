@@ -1,7 +1,7 @@
 # Project "QRCode Auqa"
 ## Navigation / Навігація:
 - [Main information / Головна інформація](#main-information-of-project--основна-інформація-про-проект)
-- [Command structure / Склад команди](https://github.com/IllyaShramko/QRcode-Aqua?tab=readme-ov-file#command-structure--%D1%81%D0%BA%D0%BB%D0%B0%D0%B4-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8)
+- [Command structure / Склад команди](#command-structure--склад-команди)
 - []()
 - []()
 - []()
