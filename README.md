@@ -1,4 +1,4 @@
-# Project "QRCode Auqa"
+# Project "QRCode Aqua"
 ## Navigation / Навігація:
 - [Main information](#main-information-of-project--основна-інформація-про-проект)
 - [Command structure](#command-structure--склад-команди)
@@ -8,7 +8,7 @@
 - [How run this project on your own PC](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
 - [Conclusion / Висновок](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
 ## Main Information of project / Основна Інформація про проект:
-### QRCode Auqa project can do / QRCode Auqa project може робити:
+### QRCode Aqua project can do / QRCode Aqua project може робити:
 - Start up / Запускатися
 - Generate and save customizated QR-codes / Генерує а також зберігає кастомізовані QR-коди 
 - Can changing type of subcribes with payment methods / Може змінюваати типи підписок с оплачуваними методами
