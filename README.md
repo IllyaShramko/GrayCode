@@ -1,11 +1,12 @@
 # Project "QRCode Auqa"
 ## Navigation / Навігація:
-- [Main information / Головна інформація](#main-information-of-project--основна-інформація-про-проект)
-- [Command structure / Склад команди](#command-structure--склад-команди)
-- []()
-- []()
-- []()
-- []()
+- [Main information](#main-information-of-project--основна-інформація-про-проект)
+- [Command structure](#command-structure--склад-команди)
+- [Figma & FigJam](#figma--figjam)
+- [Project structure](#project-structure--структура-проєкту)
+- [Applications and for what they needed](#applications-and-for-what-they-needed-they-main-functions--додатки-та-навіщо-вони-потрібні-їх-основні-функції)
+- [How run this project on your own PC](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
+- [Conclusion / Висновок](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
 ## Main Information of project / Основна Інформація про проект:
 ### QRCode Auqa project can do / QRCode Auqa project може робити:
 - Start up / Запускатися
@@ -35,9 +36,8 @@ ____
 ____
 ## [Figma](https://www.figma.com/design/MmrkuvX06fTykUtPIY5vig/Untitled?node-id=0-1&t=zx68S8o0qcLjLxW1-1) & [FigJam](https://www.figma.com/board/IK5GgL0IesWTOP4s8QbsvZ/FigJam-QRAqua?node-id=0-1&t=K6yqz4vuzxA6GEBs-1)
 ____
-## Project structure / Структура проєкту:
+# Project structure / Структура проєкту:
 ![Structure_project](/blog/static/images/structure_project.jpg)
-____
 ____
 ## Applications and for what they needed, they main functions / Додатки та навіщо вони потрібні, їх основні функції:
 ### On English language:
