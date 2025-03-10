@@ -45,7 +45,7 @@ ____
 - Application `subscribes` created for control and switch type of subscribe user, e.g. how much user can generate QRcodes, when the term of work ends of QRcode. Also there created model __Subscribe__.
 - Application `payment` created for switch subscribe who was selected by user on page `subscribes`.
 - Application `my_qrs` created for keep user's QRcodes and delete they if it want user. Also `my_qrs` needed for redirect users on their web-sites and it is implemented in this way:
-    ```
+    ```python
     # Create a function for redirect the user if all conditions are met.
     def redirect_qrcode(request: HttpRequest, pk):
     # Get QRcode by him id
@@ -82,7 +82,7 @@ ____
 - Додаток `subscribes`, створений для керування та перемикання типу підписок користувача, наприклад скільки користувач може згенерувати QR-кодів, коли закінчується термін роботи QR-коду. Також тут створенна модель __Subscribe__.
 - Додаток `payment`, створений для перемикання підписок, який вибрав обрав на сторінці `subscribes`.
 - Додаток `my_qrs`, створений для збереження QR-кодів користувача та видалення їх, якщо це потрібно користувачу. Також потрібен для перенаправлення користувача на його сайт, який він вказав при створенні QR-кода, це реалізовано ось таким способом:
-    ```
+    ```python
     # Створюємо функцію для перенаправлення користувача якщо всі умови задоволняють це зробити
     def redirect_qrcode(request: HttpRequest, pk):
     # Отримуємо QRcode за його id
