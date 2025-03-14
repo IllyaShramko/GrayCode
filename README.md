@@ -1,7 +1,6 @@
 # Project "QRCode Aqua"
-## Navigation / Навігація:
 > [!TIP]
->
+> ## Navigation / Навігація:
 > - [Main information](#main-information-of-project--основна-інформація-про-проект)
 > - [Command structure](#command-structure--склад-команди)
 > - [Figma & FigJam](#figma--figjam)
