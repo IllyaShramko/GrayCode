@@ -10,12 +10,10 @@
     </head>
     <body>
         <header class="without-auth">
-            <!-- <div class="logo-title"> -->
                 <a href="/" class="logo-title" style="text-decoration: none; text-transform:none;">
                     <img src="{% static 'images/wave.png' %}" alt="">
                     <h1 class="title">QRCode Aqua</h1>
                 </a>
-            <!-- </div>  -->
                 <div class="links">
                     {% if not is_auth %}
                         <a href="{% url 'login' %}" class="login-url">Log in</a>

@@ -1,12 +1,14 @@
 # Project "QRCode Aqua"
 ## Navigation / Навігація:
-- [Main information](#main-information-of-project--основна-інформація-про-проект)
-- [Command structure](#command-structure--склад-команди)
-- [Figma & FigJam](#figma--figjam)
-- [Project structure](#project-structure--структура-проєкту)
-- [Applications and for what they needed](#applications-and-for-what-they-needed-they-main-functions--додатки-та-навіщо-вони-потрібні-їх-основні-функції)
-- [How run this project on your own PC](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
-- [Conclusion / Висновок](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
+> [!TIP]
+>
+> - [Main information](#main-information-of-project--основна-інформація-про-проект)
+> - [Command structure](#command-structure--склад-команди)
+> - [Figma & FigJam](#figma--figjam)
+> - [Project structure](#project-structure--структура-проєкту)
+> - [Applications and for what they needed](#applications-and-for-what-they-needed-they-main-functions--додатки-та-навіщо-вони-потрібні-їх-основні-функції)
+> - [How run this project on your own PC](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
+> - [Conclusion / Висновок](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
 ## Main Information of project / Основна Інформація про проект:
 ### QRCode Aqua project can do / QRCode Aqua project може робити:
 - Start up / Запускатися
@@ -121,7 +123,10 @@ ____
 git clone https://github.com/IllyaShramko/QRcode-Aqua.git
 ```
 ### Second, you need to create venv and install all requirements who typed bottom for correctly work project / По-друг, вам потрібно створити venv і встановити всі біблеотеки з файлу requirements, які перечислені внизу для коректної роботи проекту:
-#### You can create venv for 1 command / Ви можете створити віртуальне оточення з допомоги 1 команди:
+#### You can create and activate venv for 3 commands / Ви можете створити та активувати віртуальне оточення з допомоги 3 команд:
+```
+cd QRcode-aqua
+```
 On Windows console:
 ```
 python -m venv venv
