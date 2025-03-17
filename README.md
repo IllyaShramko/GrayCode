@@ -228,7 +228,7 @@ All this has not yet been implemented in the project, due to the fact that it do
 Це все поки що не було реалізовано у проєкті, через те що цей він не працює на хості 24/7.
 
 # Conclusion / Висновок:
-
+### UA:
 #### Підвідимо підсумки:
 Ми створили свій перший власний великий проєкт на фреймворці __Django__, при його створені ми пройшли через багато проблем, які вирішували по ходу його створення. 
 Ми навчились:
@@ -244,4 +244,22 @@ All this has not yet been implemented in the project, due to the fact that it do
 > По-третє ми також навчились працьювати з `media` файлами, а саме: підключати до проєкту, зберігати їх шлях у базі данних. Так як зберігати всі __QR-коди__ у теці `static` не дуже правильно, так як у `media` дуже зручно зберігати усі зображення, наприклад зображень __QR-кодів__ та аватарок профілей.
 
 > По-четверте щоб було легше та швидше находити інформацію наприклад о __QR-коді__, ми використовували БД з власною моделю `QRcodes`, за допомогою цього, тепер щоб отримати певний __QR-код__ потрібно ввести 1 із його значень (наприклад по id). Також щоб контролювати тип підписки у користувача за допомогою моделі `Profile`, щоб ця модель корректно працьювала, ми використовували підключення `OneToOne` до стандартної моделі __django__, також щоб контролювати тип підписки ми використовували `ManyToOne`, не `OneToOne` та не `ManyToMany` так як в моделі `Subscribes` у нас тільки 3 типа підписок, тому `ManyToOne` забезпечує підключення `Багато до многих`, так як користувачів буде багато, а підписок тільки 3. Тепер ми навчились працювати з такими типами полями як: CharField, TextField, ImageField, ForeignKey, ManyToManyField, OneToOneField.
+
+### EN:
+#### Let's summarize:
+We created our first own large project on the __Django__ framework, when creating it we went through many problems that we solved during its creation.
+We learned:
+1. To make web-projects on __Django__
+2. To work with __django__, __qrcode__
+3. To work with `media` files
+4. To use the database for our own purposes
+
+> First, a large web project was made on __Django__, which greatly improved our knowledge of Python and the new __Django__ framework, we got acquainted with its functions, capabilities, speed and security.
+
+> Secondly, we got acquainted with the new `qrcode` module, when we created a page for generating __QR-codes__, we didn't know how to create them yet, but we searched for a module on Python and found it! Having familiarized ourselves with its full functionality, we created a custom generation of __QR-codes__. Now we know how to create __QR-codes__ in __python__
+
+> Thirdly, we also learned how to work with `media` files, namely: connect to the project, save their path in the database. Since storing all __QR-codes__ in the `static` folder is not very correct, since it is very convenient to store all images in `media`, for example, images of __QR-codes__ and profile avatars.
+
+> Fourthly, to make it easier and faster to find information, for example, about __QR-codes__, we used a database with our own `QRcodes` model, with the help of which, now to get a certain __QR-code__ you need to enter 1 of its values ​​(for example, by id). Also, to control the user's subscription type using the `Profile` model, so that this model works correctly, we used the `OneToOne` connection to the standard __django__ model, also to control the subscription type we used `ManyToOne`, not `OneToOne` and not `ManyToMany` since in the `Subscribes` model we have only 3 subscription types, therefore `ManyToOne` provides a `Many to Many` connection, since there will be many users, and only 3 subscriptions. Now we have learned to work with such types of fields as: CharField, TextField, ImageField, ForeignKey, ManyToManyField, OneToOneField.
+
 ### Many thanks to Egor Galkin, David Petrenko and Timur Koshel' for their work. But I especially want to say a big thank you to Egor for his great contribution to the project.
