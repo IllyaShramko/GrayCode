@@ -8,6 +8,7 @@
 > - [Project structure](#project-structure--структура-проєкту)
 > - [Applications and for what they needed](#applications-and-for-what-they-needed-they-main-functions--додатки-та-навіщо-вони-потрібні-їх-основні-функції)
 > - [How run this project on your own PC](#how-correctly-run-the-project-on-your-own-pc--як-правильно-запустити-проект-на-вашому-власному-компютері)
+> - [Project prospects / Перспективи проєкту](#project-prospects--перспективи-проєкту)
 > - [Conclusion / Висновок](#Conclusion--Висновок)
 # Main Information of project / Основна Інформація про проект:
 ## Technologies / технології:
