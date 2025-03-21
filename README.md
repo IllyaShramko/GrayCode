@@ -29,9 +29,13 @@
 - Saves every qr-code who was created by user / Зберігає кожжний QR-код який був створений користувачем
 - Control and limit the action of the QR-code / Контролює й обмежує дії с QR-кодом
 ____
-### Why this project is useful / Чому цей проект корисний:
-- Цей проєкт буде корисний якщо вам потрібно згенерувати просто та швидко кастомний QR-код за вашим URL-посиланням або інформацією.
-- This project will be useful if you need to generate a custom QR code based on your URL link or information simply and quickly
+## Why this project is useful / Чому цей проект корисний:
+- Цей проєкт буде корисний якщо вам потрібно згенерувати просто та швидко кастомний __QR-код__ за вашим URL-посиланням.
+- Також можна створити __QR-код__ за будь-якою інформацією, що дуже зручно для підприємств
+- Також цей проєкт буде корисний, якщо ви хочете вивчити як створювати базову структуру проєкта на основі фреймворку __Django__
+- This project will be useful if you need to generate a custom __QR-code__ based on your URL link or information simply and quickly
+- You can also create a __QR-code__ for any information, which is very handy for businesses
+- This project will also be created if you want to learn how to create the basic structure of the project based on the __Django__ framework
 ## Command structure / склад команди:
 - Illya Shramko / Ілля Шрамко (Team Lead) [github.com/IllyaShramko](https://github.com/IllyaShramko/QRcode-Aqua)
 - Timur Koshel' / Тимур Кошель [github.com/kosheltimur](https://github.com/kosheltimur/QRcode)
@@ -196,11 +200,16 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 ### Third, libraries which you need to install for run the project / По-третє, модулі, які вам знадобиться установити для роботи проекту:
-#### 1. django, it's main module for work all project, without he project won't be started! / django це головний модуль для роботи всього проекту, без нього проект не запуститься!
-#### 2. os need for manupilate files, save qrcodes etc. / OS потрібен для маніпулювання файлами та збереження qr-кодів, тощо.
-#### 3. qrcode, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes / qrcode, це основний модуль для створення qr-кодів, без нього можна запустити проект, але не буде генерувати qr-коди
-#### 4. pillow, it's needed for work module qrcode / pillow, потрібен для роботи модуля qrcode
-#### 5. time, it's needed for control and limit the action on QR-codes / time, потрібен для контролю та обмеження дій над QR-кодами
+> [!NOTE]
+> 1. `django`, it's main module for work all project, without he project won't be started! / `django` це головний модуль для роботи всього проекту, без нього проект не запуститься!
+
+> 2. `os` need for manupilate files, save qrcodes etc. / `OS` потрібен для маніпулювання файлами та збереження qr-кодів, тощо.
+
+> 3. `qrcode`, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes / `qrcode`, це основний модуль для створення qr-кодів, без нього можна запустити проект, але не буде генерувати qr-коди
+
+> 4. `pillow`, it's needed for work module `qrcode` / `pillow`, потрібен для роботи модуля `qrcode`
+
+> 5. `time`, it's needed for control and limit the action on QR-codes / `time`, потрібен для контролю та обмеження дій над QR-кодами
 ### You can install all of this module for 1 command / Ви можете встановити усі ці модулі з допомоги 1 команди:
 ```
 pip install -r requirements.txt
@@ -244,7 +253,7 @@ All this has not yet been implemented in the project, due to the fact that it do
 
 > По-третє ми також навчились працьювати з `media` файлами, а саме: підключати до проєкту, зберігати їх шлях у базі данних. Так як зберігати всі __QR-коди__ у теці `static` не дуже правильно, так як у `media` дуже зручно зберігати усі зображення, наприклад зображень __QR-кодів__ та аватарок профілей.
 
-> По-четверте щоб було легше та швидше находити інформацію наприклад о __QR-коді__, ми використовували БД з власною моделю `QRcodes`, за допомогою цього, тепер щоб отримати певний __QR-код__ потрібно ввести 1 із його значень (наприклад по id). Також щоб контролювати тип підписки у користувача за допомогою моделі `Profile`, щоб ця модель корректно працьювала, ми використовували підключення `OneToOne` до стандартної моделі __django__, також щоб контролювати тип підписки ми використовували `ManyToOne`, не `OneToOne` та не `ManyToMany` так як в моделі `Subscribes` у нас тільки 3 типа підписок, тому `ManyToOne` забезпечує підключення `Багато до многих`, так як користувачів буде багато, а підписок тільки 3. Тепер ми навчились працювати з такими типами полями як: CharField, TextField, ImageField, ForeignKey, ManyToManyField, OneToOneField.
+> По-четверте щоб було легше та швидше находити інформацію наприклад о __QR-коді__, ми використовували БД з власною моделю `QRcodes`, за допомогою цього, тепер щоб отримати певний __QR-код__ потрібно ввести 1 із його значень (наприклад по id). Також щоб контролювати тип підписки у користувача за допомогою моделі `Profile`, щоб ця модель корректно працьювала, ми використовували підключення `OneToOne` до стандартної моделі __django__, також щоб контролювати тип підписки ми використовували `ManyToOne`, не `OneToOne` та не `ManyToMany` так як в моделі `Subscribes` у нас тільки 3 типа підписок, тому `ManyToOne` забезпечує підключення `Багато до многих`, так як користувачів буде багато, а підписок тільки 3. Тепер ми навчились працювати з такими типами полями як: `CharField`, `TextField`, `ImageField`, `ForeignKey`, `ManyToManyField`, `OneToOneField`.
 
 ### EN:
 #### Let's summarize:
@@ -263,4 +272,4 @@ We learned:
 
 > Fourthly, to make it easier and faster to find information, for example, about __QR-codes__, we used a database with our own `QRcodes` model, with the help of which, now to get a certain __QR-code__ you need to enter 1 of its values ​​(for example, by id). Also, to control the user's subscription type using the `Profile` model, so that this model works correctly, we used the `OneToOne` connection to the standard __django__ model, also to control the subscription type we used `ManyToOne`, not `OneToOne` and not `ManyToMany` since in the `Subscribes` model we have only 3 subscription types, therefore `ManyToOne` provides a `Many to Many` connection, since there will be many users, and only 3 subscriptions. Now we have learned to work with such types of fields as: CharField, TextField, ImageField, ForeignKey, ManyToManyField, OneToOneField.
 
-### Many thanks to Egor Galkin, David Petrenko and Timur Koshel' for their work. But I especially want to say a big thank you to Egor for his great contribution to the project.
+### Thanks to Egor Galkin, David Petrenko and Timur Koshel' for their work.
