@@ -21,7 +21,7 @@
 > - sql
 > - Figma
 > - Figjam
-> - git Aqua
+> - git
 > - Github
 ### QrayCode project can do / QrayCode project може робити:
 - Generate and save customizated QR-codes / Генерує а також зберігає кастомізовані QR-коди 
