@@ -86,10 +86,10 @@ button {
     background: #82A9F2;
     border: 3px solid #000000;
     border-radius: 30px;
-    
 }
 button:hover {
     background: #628ad4;
+    cursor: pointer;
 }
 .main-info-card-inputs img {
     position: absolute;

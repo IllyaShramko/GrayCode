@@ -20,9 +20,20 @@
             <p>потрібно aавторизуватись</p>
         </div>
     {% else %}
-        <h1 class="home-page-text">Генератор QR-Кодів</h1>
+        <h1 class="home-page-text">Твій генератор QR-Кодів</h1>
         <h2 class="home-page-description">Створіть свій перший безкоштовний та кастомізований QRкод на сторінці <a href="{% url 'generate' %}">генерації</a>!</h2>
         
+        <div class="qrcodes">
+            <img id="qrcode1" src="{% static 'home_app/imgs/1.png' %}">
+            <img id="qrcode2" src="{% static 'home_app/imgs/2.png' %}">
+            <img id="qrcode3" src="{% static 'home_app/imgs/3.png' %}">
+            <img id="qrcode4" src="{% static 'home_app/imgs/4.png' %}">
+            <img id="qrcode5" src="{% static 'home_app/imgs/5.png' %}">
+        </div>
+
+        <div class="line"></div>
+
+        <h2 class="home-page-description">Змініть свій тип підписки для створення ще більше QR-Кодів!</h2>
         <div class="subscribes">
             <div class="subscribe s1">
                 <div class="information">
@@ -115,26 +126,27 @@
                 </div>
             </div>
         </div>
-        
-        <div class="contacts">
-            <h2>Служба Підтримки</h2>
-            <div class="links-contacts">
-                <div class="contact">
-                    <a href="https://www.instagram.com/world.it.academy" class="image-bg">
-                        <img style="width: 60%; height: 60%" class="image-contact" src="{% static 'home_app/imgs/instagram.png' %}">
-                    </a>
-                </div>
-
-                <div class="contact">        
-                    <div class="image-bg">
-                        <img style="width: 80%; height: 80%" class="image-contact" src="{% static 'home_app/imgs/telegram.png' %}">
-                    </div>            
-                </div>
-
-                <div class="contact">
-                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class="image-bg">
-                        <img style="width: 70%; height: 55%" class="image-contact" src="{% static 'home_app/imgs/gmail.png' %}">
-                    </a>
+        <div class="contacts-div">
+            <div class="contacts">
+                <h2>Служба Підтримки</h2>
+                <div class="links-contacts">
+                    <div class="contact">
+                        <a href="https://www.instagram.com/world.it.academy" class="image-bg">
+                            <img style="width: 60%; height: 60%" class="image-contact" src="{% static 'home_app/imgs/instagram.png' %}">
+                        </a>
+                    </div>
+    
+                    <div class="contact">        
+                        <div class="image-bg">
+                            <img style="width: 80%; height: 80%" class="image-contact" src="{% static 'home_app/imgs/telegram.png' %}">
+                        </div>            
+                    </div>
+    
+                    <div class="contact">
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class="image-bg">
+                            <img style="width: 70%; height: 55%" class="image-contact" src="{% static 'home_app/imgs/gmail.png' %}">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

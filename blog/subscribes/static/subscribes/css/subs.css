@@ -95,7 +95,7 @@ li {
     gap: 10px;
     width: 265px;
     height: 62px;
-    background: #82A9F2;
+    background: #FFFFFF;
     border: 3px solid #000000;
     border-radius: 30px;
     font-family: 'Inter';
@@ -106,7 +106,7 @@ li {
     cursor: pointer;
 }
 .subscibea:hover {
-    background: #5B8CE7;
+    background: #b7b7b7;
 }
 .des2 {
     margin-bottom: 35px;

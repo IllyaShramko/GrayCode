@@ -29,42 +29,15 @@ p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 50px;
-    line-height: 116px;
+    font-size: 40px;
     text-align: center;
-
     color: #FFFFFF;
-
-
 }
 h2 {
     font-family: 'Inter';
-    font-size: 28px;
+    font-weight: 500;
+    font-size: 25px;
     color: #FFFFFF;
-}
-.contacts {
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 350px;
-    gap: 10px;
-}
-.links-contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-}
-.contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    
 }
 .image-bg {
     display: flex;
@@ -77,6 +50,7 @@ h2 {
 }
 .home-page-description {
     text-align: center;
+    margin-top: 20px;
 }
 .home-page-description a {
     font-size: 28px;
@@ -104,7 +78,7 @@ h2 {
     width: 390px;
     height: 462px;
     padding-left: 30px;
-
+    
 }
 .information {
     
@@ -133,14 +107,14 @@ h3 {
     font-size: 40px;
     line-height: 69px;
     text-transform: uppercase;
-
+    
     color: #FFFFFF;
 }
 li {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-
+    
     color: #FFFFFF;
 }
 .line-between-divs {
@@ -162,7 +136,7 @@ li {
     text-transform: uppercase;
     margin-top: 10px;
     color: #FFFFFF;
-
+    
 }
 .subscibea {
     box-sizing: border-box;
@@ -174,7 +148,7 @@ li {
     gap: 10px;
     width: 265px;
     height: 62px;
-    background: #82A9F2;
+    background: #ffffff;
     border: 3px solid #000000;
     border-radius: 30px;
     font-family: 'Inter';
@@ -184,7 +158,7 @@ li {
     color: #000000;
 }
 .subscibea:hover {
-    background: #5B8CE7;
+    background: #b7b7b7;
 }
 .des2 {
     margin-bottom: 35px;
@@ -198,4 +172,90 @@ li {
 li{
     font-size: 20px;
     line-height: 30px;
+}
+.qrcodes {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 500px;
+}
+.qrcodes img {
+    width: 300px;
+    height: 300px;
+}
+#qrcode1 {
+    position: relative;
+    z-index: 3;
+    left: 100px;
+    top: 150px;
+    filter: brightness(70%)
+}
+
+#qrcode2 {
+    position: relative;
+    z-index: 4;
+    right: 20px;
+    top: 75px;
+    box-shadow: -10px 10px 10px 10px rgba(0,0,0,0.7);
+    filter: brightness(85%)
+}
+
+#qrcode3 {
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.7);
+}
+#qrcode5 {
+    position: relative;
+    z-index: 3;
+    right: 100px;
+    top: 150px;
+    filter: brightness(70%)
+    
+}
+
+#qrcode4 {
+    position: relative;
+    z-index: 4;
+    left: 20px;
+    top: 75px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.7);
+    filter: brightness(85%)
+}
+.line {
+    width: 92%;
+    height: 5px;
+    background-color: #3d444d;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.contacts {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.links-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.contacts-div {
+    width: 100%;
+    height: 150px;
+    padding: 20px;
 }

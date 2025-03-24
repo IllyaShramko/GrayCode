@@ -11,8 +11,12 @@
     <body>
         <header class="without-auth">
                 <a href="/" class="logo-title" style="text-decoration: none; text-transform:none;">
-                    <img src="{% static 'images/wave.png' %}" alt="">
-                    <h1 class="title">QRCode Aqua</h1>
+                    <img src="{% static 'images/icon.svg' %}">
+                    <div>
+                        <h1 class="title">Gray-Code</h1>
+                        <div class="line-logo"></div>
+                        <p class="title-p">Your QRcode Maker</p>
+                    </div>
                 </a>
                 <div class="links">
                     {% if not is_auth %}
