@@ -1,4 +1,4 @@
-# Project "QRCode Aqua"
+# Project "QrayCode"
 ## Navigation / Навігація:
 > [!TIP]
 > - [Main information](#main-information-of-project--основна-інформація-про-проект)
@@ -21,9 +21,9 @@
 > - sql
 > - Figma
 > - Figjam
-> - git
+> - git Aqua
 > - Github
-### QRCode Aqua project can do / QRCode Aqua project може робити:
+### QrayCode project can do / QrayCode project може робити:
 - Generate and save customizated QR-codes / Генерує а також зберігає кастомізовані QR-коди 
 - Can changing type of subcribes with payment methods / Може змінюваати типи підписок с оплачуваними методами
 - Saves every qr-code who was created by user / Зберігає кожжний QR-код який був створений користувачем
@@ -48,7 +48,7 @@ ____
 # Project structure / Структура проєкту:
 ```mermaid
 flowchart TD
-    Project{QRcode-Aqua}
+    Project{GrayCode}
     db[(db.sqlite3)]
     templates[/templates/]
     static[/static/]
@@ -177,12 +177,12 @@ ____
 > Also you need install .git for clone project.
 ### For first, you need to clone this repository with command / Для початку вам потрібно скопіювати проект с командою:
 ```
-git clone https://github.com/IllyaShramko/QRcode-Aqua.git
+git clone https://github.com/IllyaShramko/GrayCode.git
 ```
 ### Second, you need to create venv and install all requirements who typed bottom for correctly work project / По-друг, вам потрібно створити venv і встановити всі біблеотеки з файлу requirements, які перечислені внизу для коректної роботи проекту:
 #### You can create and activate venv for 3 commands / Ви можете створити та активувати віртуальне оточення з допомоги 3 команд:
 ```
-cd QRcode-aqua
+cd GratCode
 ```
 On Windows console:
 ```
