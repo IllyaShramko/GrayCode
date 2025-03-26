@@ -1,4 +1,4 @@
-# Project "QrayCode"
+# Project "GrayCode"
 ## Navigation / Навігація:
 > [!TIP]
 > - [Main information](#main-information-of-project--основна-інформація-про-проект)
@@ -23,7 +23,7 @@
 > - Figjam
 > - git
 > - Github
-### QrayCode project can do / QrayCode project може робити:
+### GrayCode project can do / GrayCode project може робити:
 - Generate and save customizated QR-codes / Генерує а також зберігає кастомізовані QR-коди 
 - Can changing type of subcribes with payment methods / Може змінюваати типи підписок с оплачуваними методами
 - Saves every qr-code who was created by user / Зберігає кожжний QR-код який був створений користувачем
