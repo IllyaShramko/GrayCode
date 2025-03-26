@@ -202,13 +202,9 @@ source venv/bin/activate
 ### Third, libraries which you need to install for run the project / По-третє, модулі, які вам знадобиться установити для роботи проекту:
 > [!NOTE]
 > 1. `django`, it's main module for work all project, without he project won't be started! / `django` це головний модуль для роботи всього проекту, без нього проект не запуститься!
-
 > 2. `os` need for manupilate files, save qrcodes etc. / `OS` потрібен для маніпулювання файлами та збереження qr-кодів, тощо.
-
 > 3. `qrcode`, it's main module for generate qrcodes, without he project can started, but doesn't generate qrcodes / `qrcode`, це основний модуль для створення qr-кодів, без нього можна запустити проект, але не буде генерувати qr-коди
-
 > 4. `pillow`, it's needed for work module `qrcode` / `pillow`, потрібен для роботи модуля `qrcode`
-
 > 5. `time`, it's needed for control and limit the action on QR-codes / `time`, потрібен для контролю та обмеження дій над QR-кодами
 ### You can install all of this module for 1 command / Ви можете встановити усі ці модулі з допомоги 1 команди:
 ```
