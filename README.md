@@ -182,7 +182,7 @@ git clone https://github.com/IllyaShramko/GrayCode.git
 ### Second, you need to create venv and install all requirements who typed bottom for correctly work project / По-друг, вам потрібно створити venv і встановити всі біблеотеки з файлу requirements, які перечислені внизу для коректної роботи проекту:
 #### You can create and activate venv for 3 commands / Ви можете створити та активувати віртуальне оточення з допомоги 3 команд:
 ```
-cd GratCode
+cd GrayCode
 ```
 On Windows console:
 ```
