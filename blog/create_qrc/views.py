@@ -27,7 +27,6 @@ modules_driwer = {
 }
 
 
-@login_required
 def render_create_qrc(request: HttpRequest):
     print(request.build_absolute_uri())
     list_absolute_url_default = request.build_absolute_uri().split("/")
@@ -45,22 +44,22 @@ def render_create_qrc(request: HttpRequest):
         os.mkdir(os.path.abspath(__file__ + f"/../../media/images/qrcodes"))
     except:
         print("Error Make Base Qrcodes Mkdir | 29")
-    current_profile = Profile.objects.get(user_id = request.user.id)
     generate_qrcode = False
     alert= False
-
-    if current_profile.subscribe.name == "base":
-        if current_profile.qrcodes_created < 1:
-            generate_qrcode= True
-    elif current_profile.subscribe.name == "standart":
-        if current_profile.qrcodes_created < 10:
-            generate_qrcode= True
-    elif current_profile.subscribe.name == "pro":
-        if current_profile.qrcodes_created < 50:
-            generate_qrcode= True
-    elif current_profile.subscribe.name == "universal":
-        if current_profile.qrcodes_created < 125:
-            generate_qrcode= True
+    if request.user.is_authenticated:
+        current_profile = Profile.objects.get(user_id = request.user.id)
+        if current_profile.subscribe.name == "base":
+            if current_profile.qrcodes_created < 1:
+                generate_qrcode= True
+        elif current_profile.subscribe.name == "standart":
+            if current_profile.qrcodes_created < 10:
+                generate_qrcode= True
+        elif current_profile.subscribe.name == "pro":
+            if current_profile.qrcodes_created < 50:
+                generate_qrcode= True
+        elif current_profile.subscribe.name == "universal":
+            if current_profile.qrcodes_created < 125:
+                generate_qrcode= True
     if request.method == "POST":
         if generate_qrcode:
             name = request.POST.get('name')
@@ -146,9 +145,13 @@ def render_create_qrc(request: HttpRequest):
             current_profile.save()
         else:
             alert = True
-    profiles = Profile.objects.filter(user_id= request.user.id)
-    profile = profiles[0]
-
-    return render(request, "create_qrc/qrc.html", context= {"is_auth": True, 'username': request.user.username, 'type_sub': profile.subscribe.name, "alert": alert})
+    if request.user.is_authenticated:
+        profiles = Profile.objects.filter(user_id= request.user.id)
+        profile = profiles[0]
+        type_sub = profile.subscribe.name
+    else:
+        type_sub = "none"
+    print(request.user.is_authenticated)
+    return render(request, "create_qrc/qrc.html", context= {"is_auth": request.user.is_authenticated, 'username': request.user.username, 'type_sub': type_sub, "alert": alert})
 
 # def redirect_user_to_qrcode_url():

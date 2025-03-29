@@ -30,23 +30,44 @@ input {
     border: 2px solid #000000;
     border-radius: 10px;
     font-family: 'Inter';
-    font-size: 36px;
+    font-size: 30px;
     padding-left: 10px;
 }
 button {
-    width: 618px;
+    width: 318px;
     height: 64px;
     background-color: #82A9F2;
     border: 2px solid #000000;
     border-radius: 10px;
     font-family: 'Inter';
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 10px;
-    text-transform: uppercase;
 }
 button:hover {
     background-color: #5B8CE7;
 }
 .login-url {
     font-weight: 600;   
+}
+.doesnt-has-account {
+    font-family: 'Inter';
+    font-size: 20px;
+    color: #000000;
+    opacity: 0.8;
+    text-align: center;
+}
+.doesnt-has-account a {
+    text-transform: none;
+    color: #000000;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }

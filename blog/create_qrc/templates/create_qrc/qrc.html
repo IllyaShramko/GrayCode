@@ -127,15 +127,27 @@
                 <a href="{% static 'create_qrc/images/qrcode.png' %}" class="download" download="">Download</a>
             </div>
             {% if alert %}
-                <div class="alert">
-                    <h3 class="alert-text">У вас закінчився ліміт створення QR-кодів</h3>
-                    <img src="{% static 'create_qrc/images/info.png' %}" class="info-img">
-                    <div class="popup-info">
-                        <p class="popup-text">
-                            Ліміт можна збільшить, якщо змінити підписку на сторінці Subscribes
-                        </p>
+                {% if is_auth %}
+                    <div class="alert">
+                        <h3 class="alert-text">У вас закінчився ліміт створення QR-кодів</h3>
+                        <img src="{% static 'create_qrc/images/info.png' %}" class="info-img">
+                        <div class="popup-info">
+                            <p class="popup-text">
+                                Ліміт можна збільшить, якщо змінити підписку на сторінці <span>Subscribes</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                {% else %}
+                    <div class="alert">
+                        <h3 class="alert-text">Щоб почати створювати QR-коди потрібно авторизуватися</h3>
+                        <img src="{% static 'create_qrc/images/info.png' %}" class="info-img">
+                        <div class="popup-info">
+                            <p class="popup-text">
+                                Авторизуватися можна на сторінці <span>Log In</span>
+                            </p>
+                        </div>
+                    </div>
+                {% endif %}
             {% endif %}
             </div>
     </form>

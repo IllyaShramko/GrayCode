@@ -11,15 +11,6 @@
 {% endblock %}
 
 {% block content %}
-    {% if not is_auth %}
-        <div class="welcome-text">
-            <p>На цьому сайті можно</p>
-            <p>створити кастомний</p>
-            <p>QR-Code.</p>
-            <p>Щоб почати створювати</p>
-            <p>потрібно aавторизуватись</p>
-        </div>
-    {% else %}
         <h1 class="home-page-text">Твій генератор QR-Кодів</h1>
         <h2 class="home-page-description">Створіть свій перший безкоштовний та кастомізований QRкод на сторінці <a href="{% url 'generate' %}">генерації</a>!</h2>
         
@@ -150,5 +141,4 @@
                 </div>
             </div>
         </div>
-    {% endif %}
 {% endblock %}

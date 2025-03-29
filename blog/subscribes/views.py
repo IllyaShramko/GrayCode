@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from user.models import Profile
-# Create your views here.
 from django.contrib.auth.decorators import login_required
 from subscribes.models import Subscribe
-@login_required
 
+@login_required
 def render_subs(request):
     profiles = Profile.objects.filter(user_id= request.user.id)
     subscribes = Subscribe.objects.all()

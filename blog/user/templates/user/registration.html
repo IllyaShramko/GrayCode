@@ -16,19 +16,22 @@
     <form method="post" class="registration">
         {% csrf_token %}  
         {% if not confirm %}
-            <h1>SIGN UP</h1>
-            <input type="text" placeholder="Username *" name="username" required>
-            <input type="password" placeholder="Password *" name="password" required>
-            <input type="password" placeholder="Confirm Password *" name="confirm_password" required>
-            <button type="submit">Submit</button>
-            {% if error == "username_error" %}
-                <p style="color: #FF0000; font-family: 'Inter'; font-size: 30px;" class="error">This Username already exists</p>
-            {% elif error == "password_error" %}
-                <p style="color: #FF0000; font-family: 'Inter'; font-size: 30px;" class="error">Passwords are not correct</p>    
+            <h1>Реєстрація</h1>
+            <input type="text" placeholder="Username *" name="username" autocomplete="off" required>
+            <input type="password" placeholder="Password *" name="password" autocomplete="new-password" required>
+            <input type="password" placeholder="Confirm Password *" name="confirm_password" autocomplete="new-password" required>
+            <div class="button-div">
+                <button type="submit">Зареєструватися</button>
+                <p class="does-has-account">Вже маєте обліковий запис? <a href="{% url 'login' %}">Увійти</a></p>      
+                {% if error == "username_error" %}
+                    <p style="color: #FF0000; font-family: 'Inter'; font-size: 28px;" class="error">This Username already exists</p>
+                {% elif error == "password_error" %}
+                    <p style="color: #FF0000; font-family: 'Inter'; font-size: 30px;" class="error">Passwords are not correct</p>    
             {% endif %}
+            </div>
         {% else %}
             <h2>Успішна реєстрація</h2>
-            <a href="{% url 'login' %}" style="color:black; text-transform:none">Авторизація</a>
+            <a href="{% url 'login' %}" style="color:black; text-transform:none; text-decoration:underline;">Авторизація</a>
         {% endif %}
     </form>
 {% endblock %}

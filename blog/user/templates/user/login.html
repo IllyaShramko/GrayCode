@@ -15,12 +15,15 @@
 {% block content %}
     <form method="post" class="login">
         {% csrf_token %}
-        <h1>LOGIN</h1>
+        <h1>Авторизація</h1>
         <input type="text" name="username" placeholder="Username *">
         <input type="password" name="password" placeholder="Password *">
-        <button name="submit">Submit</button>
-        {% if error %}
-            <p style="color: red; font-family: 'Inter'; font-size: 30px;">Username or Password is incorect</p>
-        {% endif %}
+        <div class="button-div">
+            <button name="submit">Увійти</button>
+            <p class="doesnt-has-account">Не маєте облікового запису? <a href="{% url 'registration' %}">Зареєструватися</a></p>      
+            {% if error %}
+                <p style="color: red; font-family: 'Inter'; font-size: 30px;">Username or Password is incorrect</p>
+            {% endif %}
+        </div>
     </form>
 {% endblock %}

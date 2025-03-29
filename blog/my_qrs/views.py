@@ -3,9 +3,10 @@ from django.http import HttpRequest
 from create_qrc.models import QRcodes
 from django.utils import timezone
 from user.models import Profile
+from django.contrib.auth.decorators import login_required
 import os
 # Create your views here.
-
+@login_required
 def render_my_qrs(request: HttpRequest):
     sorting_type = "a-z"
     popup_alert= False

@@ -19,14 +19,15 @@
                     </div>
                 </a>
                 <div class="links">
+                    <a href="{% url 'generate' %}" class="generate-url">Generate</a>
+                    <a href="{% url 'my_qrs' %}" class="my-qrs-url">My QR-codes</a>
+                    <a href="{% url 'subscribes' %}" class="subscribe-url">Subscribe</a>
+                    <div class="between-links"></div>
                     {% if not is_auth %}
                         <a href="{% url 'login' %}" class="login-url">Log in</a>
                         <a href="{% url 'registration' %}" class="registration-url">Sign Up</a>
                     {% else %}
-                        <a href="{% url 'generate' %}" class="generate-url">Generate</a>
-                        <a href="{% url 'my_qrs' %}" class="my-qrs-url">My qrs</a>
-                        <a href="{% url 'subscribes' %}" class="subscribe-url">Subscribe</a>
-                        <p class="username">{{ username  }}</p>
+                        <p class="username">{{username}}</p>
                         <a href="{% url 'logout' %}" class = "logout-url"><img class = "logout-image" src="{% static 'images/logout.png' %}" alt="logout"></a>
                     {% endif %}
                 </div>

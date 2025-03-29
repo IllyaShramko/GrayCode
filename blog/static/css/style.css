@@ -11,7 +11,7 @@ body{
 }
 .without-auth {
     display: flex;
-    width: 98vw;
+    width: 100%;
     height: 160px;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ img {
 }
 .links {
     position: absolute;
-    right: 55px;
+    right: 45px;
     top: 25px;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@ img {
 }
 a {
     color: white;
-    font-size: 35px;
+    font-size: 28px;
     font-family: "Inter";
     text-transform: uppercase;
     color: #FFFFFF;
@@ -45,7 +45,7 @@ a {
 }
 .logo-title {
     position: absolute;
-    left: 55px;
+    left: 45px;
     top: 25px;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ a {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 35px;
+    font-size: 28px;
     line-height: 48px;
 
 }
@@ -66,8 +66,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 50px;
+    width: 45px;
+    height: 40px;
 }
 .logout-image {
     width: 100%;
@@ -90,4 +90,10 @@ a {
 .title-p {
     color: #d2d2d2;
     font-size: 20px;
+}
+.between-links {
+    background-color: #3d444d;
+    height: 30px;
+    width: 3px;
+    border-radius: 15px;
 }

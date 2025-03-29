@@ -20,6 +20,7 @@ form {
     border-radius: 20px;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 .config {
     display: flex;
@@ -267,7 +268,7 @@ h3 {
 .popup-info {
     display: flex;
     position: absolute;
-    left: 330px;
+    /* left: 330px; */
     width: 250px;
     height: 95px;
     justify-content: center;
@@ -282,8 +283,14 @@ h3 {
 .popup-text {
     color: black;
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 19px;
     text-align: center;
+}
+.popup-text span {
+    font-family: 'Inter';
+    font-size: 19px;
+    text-align: center;
+    font-weight: bold;
 }
 .info-img:hover + .popup-info{
     opacity: 1;
@@ -319,7 +326,7 @@ h3 {
 .popup-text-url {
     color: black;
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 .info-img-url:hover + .popup-info-url{

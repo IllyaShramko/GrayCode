@@ -2,16 +2,17 @@
     
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 50px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
+    padding: 50px;
+    gap: 20px;
 
     width: 800px;
-    min-height: 550px;
+    min-height: 650px;
 
     background: #FFFFFF;
     border: 4px solid #000000;
@@ -31,19 +32,18 @@ input {
     border: 2px solid #000000;
     border-radius: 10px;
     font-family: 'Inter';
-    font-size: 36px;
+    font-size: 30px;
     padding-left: 10px;
 }
 button {
-    width: 618px;
+    width: 375px;
     height: 64px;
     background-color: #82A9F2;
     border: 2px solid #000000;
     border-radius: 10px;
     font-family: 'Inter';
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 10px;
-    text-transform: uppercase;
 }
 button:hover {
     background-color: #5B8CE7;
@@ -54,4 +54,26 @@ h2 {
 }
 .registration-url {
     font-weight: 600;   
+}
+.does-has-account {
+    font-family: 'Inter';
+    font-size: 20px;
+    color: #000000;
+    opacity: 0.8;
+    text-align: center;
+}
+.does-has-account a {
+    text-transform: none;
+    color: #000000;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
